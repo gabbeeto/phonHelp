@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Phonetics &amp; Phonology</title>
+    <style>
+        /* ── reset & base ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f8f9fa;
+            color: #1e293b;
+            padding: 16px;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 20px 18px 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        /* ── typography ── */
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.15em;
+            color: #0f172a;
+        }
+
+        .subhead {
+            font-size: 0.95rem;
+            color: #64748b;
+            border-bottom: 2px solid #e9edf2;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            color: #1e293b;
+        }
+
+        h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: 4px;
+            color: #334155;
+        }
+
+        p,
+        li {
+            font-size: 0.95rem;
+            color: #1e293b;
+        }
+
+        ul,
+        ol {
+            padding-left: 22px;
+            margin: 6px 0 12px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .note {
+            font-size: 0.88rem;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 8px 14px;
+            border-radius: 10px;
+            margin: 6px 0 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            padding: 2px 10px;
+            border-radius: 30px;
+            background: #e9edf2;
+            color: #475569;
+            margin-right: 4px;
+        }
+
+        .badge-voiced {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .badge-voiceless {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        .badge-example {
+            background: #fef9c3;
+            color: #854d0e;
+            font-weight: 500;
+        }
+
+        /* ── images ── */
+        .img-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 18px 0 10px;
+        }
+
+        .img-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            background: #f1f5f9;
+            border: 1px solid #e9edf2;
+            display: block;
+        }
+
+        .img-caption {
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: -6px;
+            margin-bottom: 4px;
+        }
+
+        /* ── sound tables ── */
+        .sound-group {
+            background: #fafbfc;
+            border-radius: 14px;
+            padding: 12px 16px 8px;
+            margin: 8px 0 14px;
+            border: 1px solid #eef2f6;
+        }
+
+        .sound-group strong {
+            color: #0f172a;
+        }
+
+        .sound-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 4px 8px;
+            padding: 3px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .sound-item:last-child {
+            border-bottom: none;
+        }
+
+        .sound-item .ipa {
+            font-family: 'Times New Roman', 'Noto Serif', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            background: #eef2f6;
+            padding: 0 8px;
+            border-radius: 6px;
+            letter-spacing: 0.02em;
+        }
+
+        .sound-item .example {
+            font-style: italic;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+
+        .vowel-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 16px;
+            background: #fafbfc;
+            border-radius: 14px;
+            padding: 12px 16px;
+            margin: 6px 0 12px;
+            border: 1px solid #eef2f6;
+        }
+
+        .vowel-grid .v-item {
+            display: flex;
+            align-items: baseline;
+            gap: 4px 8px;
+            flex-wrap: wrap;
+            padding: 2px 0;
+        }
+
+        .vowel-grid .ipa {
+            font-family: 'Times New Roman', 'Noto Serif', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: #eef2f6;
+            padding: 0 8px;
+            border-radius: 6px;
+        }
+
+        /* ── transcription list ── */
+        .trans-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 14px;
+            background: #fafbfc;
+            border-radius: 14px;
+            padding: 12px 16px;
+            margin: 6px 0 12px;
+            border: 1px solid #eef2f6;
+        }
+
+        .trans-grid .t-item {
+            display: flex;
+            align-items: baseline;
+            gap: 4px 6px;
+            flex-wrap: wrap;
+            padding: 2px 0;
+            font-size: 0.9rem;
+        }
+
+        .trans-grid .t-item .word {
+            font-weight: 500;
+        }
+
+        .trans-grid .t-item .ipa {
+            font-family: 'Times New Roman', 'Noto Serif', serif;
+            font-size: 0.95rem;
+            background: #eef2f6;
+            padding: 0 6px;
+            border-radius: 5px;
+        }
+
+        .trans-grid .t-item .freq {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            background: #f1f5f9;
+            padding: 0 6px;
+            border-radius: 20px;
+        }
+
+        .trans-grid .t-item.highlight .ipa {
+            background: #fef9c3;
+            font-weight: 600;
+        }
+
+        /* ── responsive tweaks ── */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 16px 14px 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.15rem;
+            }
+            .vowel-grid {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+            .trans-grid {
+                grid-template-columns: 1fr;
+                gap: 2px;
+            }
+            .sound-item {
+                padding: 4px 0;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .vowel-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .trans-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* ── utility ── */
+        .mt-1 {
+            margin-top: 6px;
+        }
+        .mb-1 {
+            margin-bottom: 6px;
+        }
+        .mt-2 {
+            margin-top: 14px;
+        }
+        .mb-2 {
+            margin-bottom: 14px;
+        }
+        .fw-600 {
+            font-weight: 600;
+        }
+        .text-muted {
+            color: #64748b;
+            font-size: 0.88rem;
+        }
+        .border-top {
+            border-top: 2px solid #e9edf2;
+            padding-top: 16px;
+            margin-top: 20px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #e9edf2;
+            margin: 18px 0;
+        }
+        .small-note {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <h1>🗣️ Phonetics &amp; Phonology</h1>
+        <div class="subhead">A compact reference for English sounds</div>
+
+        <!-- ===== IMAGES ===== -->
+        <div class="img-grid">
+            <div>
+                <img src="face.png" alt="Speech organs diagram" loading="lazy" />
+                <div class="img-caption">Fig. 1 – Speech organs</div>
+            </div>
+            <div>
+                <img src="img.jpg" alt="Vowel chart" loading="lazy" />
+                <div class="img-caption">Fig. 2 – Vowel space</div>
+            </div>
+            <div>
+                <img src="img2.jpg" alt="Consonant chart" loading="lazy" />
+                <div class="img-caption">Fig. 3 – Consonant places &amp; manners</div>
+            </div>
+        </div>
+
+        <!-- ===== PHONETICS vs PHONOLOGY ===== -->
+        <h2>Phonetics vs Phonology</h2>
+        <p><strong>Phonetics</strong> – the study of how sounds are <em>produced, transmitted and perceived</em>. It deals with the physical properties of speech sounds.</p>
+        <ul>
+            <li>Focuses on the <strong>production</strong> of sounds</li>
+            <li>A descriptive tool for studying phonological aspects</li>
+            <li>About the <strong>sounds</strong> of language</li>
+        </ul>
+
+        <p><strong>Phonology</strong> – the study of how sounds <em>function in relation to each other</em> in a language.</p>
+        <ul>
+            <li>About the <strong>sound systems</strong> of language</li>
+            <li>Studies how sounds <strong>pattern and interact</strong></li>
+            <li>Different from phonetics: phonetics = sounds, phonology = sound systems</li>
+        </ul>
+
+        <hr />
+
+        <!-- ===== CONSONANTS – PLACE ===== -->
+        <h2>Consonants &middot; Place of Articulation</h2>
+
+        <!-- Bilabial -->
+        <h3>Bilabial</h3>
+        <p class="text-muted">Lips brought together</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/p/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">pay</span></div>
+            <div class="sound-item"><span class="ipa">/b/</span> <span class="badge badge-voiced">voiced</span> <span class="example">bay</span></div>
+            <div class="sound-item"><span class="ipa">/m/</span> <span class="badge badge-voiced">voiced</span> <span class="example">may</span></div>
+        </div>
+
+        <!-- Labiodental -->
+        <h3>Labiodental</h3>
+        <p class="text-muted">Lower lip raised towards upper front teeth</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/f/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">safe</span></div>
+            <div class="sound-item"><span class="ipa">/v/</span> <span class="badge badge-voiced">voiced</span> <span class="example">save</span></div>
+        </div>
+
+        <!-- Dental -->
+        <h3>Dental</h3>
+        <p class="text-muted">Tip of tongue touches upper front teeth</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/θ/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">oath</span></div>
+            <div class="sound-item"><span class="ipa">/ð/</span> <span class="badge badge-voiced">voiced</span> <span class="example">clothe</span></div>
+        </div>
+
+        <!-- Alveolar -->
+        <h3>Alveolar</h3>
+        <p class="text-muted">Tip of tongue towards alveolar ridge</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/t/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">too</span></div>
+            <div class="sound-item"><span class="ipa">/s/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">sue</span></div>
+            <div class="sound-item"><span class="ipa">/d/</span> <span class="badge badge-voiced">voiced</span> <span class="example">do</span></div>
+            <div class="sound-item"><span class="ipa">/z/</span> <span class="badge badge-voiced">voiced</span> <span class="example">zoo</span></div>
+            <div class="sound-item"><span class="ipa">/n/</span> <span class="badge badge-voiced">voiced</span> <span class="example">nook</span></div>
+            <div class="sound-item"><span class="ipa">/l/</span> <span class="badge badge-voiced">voiced</span> <span class="example">look</span></div>
+            <div class="sound-item"><span class="ipa">/r/</span> <span class="badge badge-voiced">voiced</span> <span class="example">rook</span></div>
+        </div>
+
+        <!-- Palatoalveolar -->
+        <h3>Palatoalveolar</h3>
+        <p class="text-muted">Blade of tongue towards palate behind alveolar ridge</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/ʃ/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">pressure</span></div>
+            <div class="sound-item"><span class="ipa">/tʃ/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">batch</span></div>
+            <div class="sound-item"><span class="ipa">/ʒ/</span> <span class="badge badge-voiced">voiced</span> <span class="example">pleasure</span></div>
+            <div class="sound-item"><span class="ipa">/dʒ/</span> <span class="badge badge-voiced">voiced</span> <span class="example">badge</span></div>
+        </div>
+
+        <!-- Palatal -->
+        <h3>Palatal</h3>
+        <p class="text-muted">Further back towards the velum</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/j/</span> <span class="badge badge-voiced">voiced</span> <span class="example">yes, yellow, beauty, new</span></div>
+            <div class="small-note">The only palatal sound in English</div>
+        </div>
+
+        <!-- Velar -->
+        <h3>Velar</h3>
+        <p class="text-muted">Back of tongue towards soft palate (velum)</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/k/</span> <span class="badge badge-voiceless">voiceless</span> <span class="example">back</span></div>
+            <div class="sound-item"><span class="ipa">/g/</span> <span class="badge badge-voiced">voiced</span> <span class="example">bag</span></div>
+            <div class="sound-item"><span class="ipa">/ŋ/</span> <span class="badge badge-voiced">voiced</span> <span class="example">bang</span></div>
+            <div class="sound-item"><span class="ipa">/w/</span> <span class="badge badge-voiced">voiced</span> <span class="example">why</span> <span class="text-muted">(velar with lip rounding)</span></div>
+        </div>
+
+        <!-- Glottal -->
+        <h3>Glottal</h3>
+        <p class="text-muted">Air passes through narrowed glottis</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/h/</span> <span class="example">high</span></div>
+            <div class="sound-item"><span class="ipa">/ʔ/</span> <span class="example">football [fuʔbɔːl]</span> <span class="text-muted">(glottal stop)</span></div>
+        </div>
+
+        <hr />
+
+        <!-- ===== CONSONANTS – MANNER ===== -->
+        <h2>Consonants &middot; Manner of Articulation</h2>
+
+        <!-- Plosives -->
+        <h3>Plosives</h3>
+        <p class="text-muted">Complete closure, air blocked, released with a burst</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/p/</span> <span class="badge badge-voiceless">voiceless</span> bilabial – <span class="example">park</span></div>
+            <div class="sound-item"><span class="ipa">/b/</span> <span class="badge badge-voiced">voiced</span> bilabial – <span class="example">bark</span></div>
+            <div class="sound-item"><span class="ipa">/t/</span> <span class="badge badge-voiceless">voiceless</span> alveolar – <span class="example">tar</span></div>
+            <div class="sound-item"><span class="ipa">/d/</span> <span class="badge badge-voiced">voiced</span> alveolar – <span class="example">dark</span></div>
+            <div class="sound-item"><span class="ipa">/k/</span> <span class="badge badge-voiceless">voiceless</span> velar – <span class="example">car</span></div>
+            <div class="sound-item"><span class="ipa">/g/</span> <span class="badge badge-voiced">voiced</span> velar – <span class="example">guard</span></div>
+        </div>
+
+        <!-- Fricatives -->
+        <h3>Fricatives</h3>
+        <p class="text-muted">Near-closure creates friction noise</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/f/</span> <span class="badge badge-voiceless">voiceless</span> labiodental – <span class="example">wife</span></div>
+            <div class="sound-item"><span class="ipa">/v/</span> <span class="badge badge-voiced">voiced</span> labiodental – <span class="example">wives</span></div>
+            <div class="sound-item"><span class="ipa">/θ/</span> <span class="badge badge-voiceless">voiceless</span> dental – <span class="example">breath</span></div>
+            <div class="sound-item"><span class="ipa">/ð/</span> <span class="badge badge-voiced">voiced</span> dental – <span class="example">breathe</span></div>
+            <div class="sound-item"><span class="ipa">/s/</span> <span class="badge badge-voiceless">voiceless</span> alveolar – <span class="example">sink</span></div>
+            <div class="sound-item"><span class="ipa">/z/</span> <span class="badge badge-voiced">voiced</span> alveolar – <span class="example">zinc</span></div>
+            <div class="sound-item"><span class="ipa">/ʃ/</span> <span class="badge badge-voiceless">voiceless</span> palatoalveolar – <span class="example">nation</span></div>
+            <div class="sound-item"><span class="ipa">/ʒ/</span> <span class="badge badge-voiced">voiced</span> palatoalveolar – <span class="example">evasion</span></div>
+            <div class="sound-item"><span class="ipa">/h/</span> glottal – <span class="example">help</span></div>
+        </div>
+
+        <!-- Affricates -->
+        <h3>Affricates</h3>
+        <p class="text-muted">Plosive + fricative, slow release</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/tʃ/</span> <span class="badge badge-voiceless">voiceless</span> palatoalveolar – <span class="example">chin, rich</span></div>
+            <div class="sound-item"><span class="ipa">/dʒ/</span> <span class="badge badge-voiced">voiced</span> palatoalveolar – <span class="example">gin, ridge</span></div>
+        </div>
+
+        <!-- Nasals -->
+        <h3>Nasals</h3>
+        <p class="text-muted">Complete closure, velum lowered, air escapes through nose</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/m/</span> <span class="badge badge-voiced">voiced</span> bilabial – <span class="example">ram</span></div>
+            <div class="sound-item"><span class="ipa">/n/</span> <span class="badge badge-voiced">voiced</span> alveolar – <span class="example">ran</span></div>
+            <div class="sound-item"><span class="ipa">/ŋ/</span> <span class="badge badge-voiced">voiced</span> velar – <span class="example">rang</span></div>
+        </div>
+
+        <!-- Laterals -->
+        <h3>Laterals</h3>
+        <p class="text-muted">Air escapes around the sides of the tongue</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/l/</span> <span class="badge badge-voiced">voiced</span> alveolar lateral</div>
+            <div class="sound-item" style="padding-left:10px; border-bottom:none;">
+                <span class="badge" style="background:#e9edf2;">clear l</span> before vowels – <span class="example">light, long</span> (tongue top raised)
+            </div>
+            <div class="sound-item" style="padding-left:10px; border-bottom:none;">
+                <span class="badge" style="background:#e9edf2;">dark l</span> elsewhere – <span class="example">milk, ball</span> [ɫ] (back raised)
+            </div>
+        </div>
+
+        <!-- Approximants -->
+        <h3>Approximants</h3>
+        <p class="text-muted">Tongue approaches roof, no friction – all voiced</p>
+        <div class="sound-group">
+            <div class="sound-item"><span class="ipa">/r/</span> alveolar/post-alveolar – <span class="example">right, brown</span></div>
+            <div class="sound-item"><span class="ipa">/j/</span> palatal – <span class="example">use, youth</span></div>
+            <div class="sound-item"><span class="ipa">/w/</span> velar/labio-velar with lip rounding – <span class="example">why, twin, square</span></div>
+            <div class="small-note">/r/ only occurs before vowels in Southern British English</div>
+        </div>
+
+        <hr />
+
+        <!-- ===== VOWELS ===== -->
+        <h2>Vowels</h2>
+
+        <h3>Tongue Height</h3>
+        <ul>
+            <li><strong>High (Close):</strong> tongue raised close to roof – <span class="ipa">/iː/</span> <em>see</em>, <span class="ipa">/ɪ/</span> <em>sit</em>, <span class="ipa">/uː/</span> <em>too</em>, <span class="ipa">/ʊ/</span> <em>put</em></li>
+            <li><strong>Mid:</strong> tongue halfway – <span class="ipa">/e/</span> <em>bed</em>, <span class="ipa">/ə/</span> <em>banana</em>, <span class="ipa">/ɜː/</span> <em>girl</em>, <span class="ipa">/ɔː/</span> <em>door</em></li>
+            <li><strong>Low (Open):</strong> tongue lowered, mouth more open – <span class="ipa">/æ/</span> <em>cat</em>, <span class="ipa">/ʌ/</span> <em>cup</em>, <span class="ipa">/ɑː/</span> <em>car</em>, <span class="ipa">/ɒ/</span> <em>clock</em></li>
+        </ul>
+
+        <h3>Tongue Backness</h3>
+        <ul>
+            <li><strong>Front:</strong> <span class="ipa">/iː/</span> <em>see</em>, <span class="ipa">/ɪ/</span> <em>sit</em>, <span class="ipa">/e/</span> <em>bed</em>, <span class="ipa">/æ/</span> <em>cat</em></li>
+            <li><strong>Central:</strong> <span class="ipa">/ɜː/</span> <em>girl</em>, <span class="ipa">/ə/</span> <em>banana</em>, <span class="ipa">/ʌ/</span> <em>cup</em></li>
+            <li><strong>Back:</strong> <span class="ipa">/uː/</span> <em>too</em>, <span class="ipa">/ʊ/</span> <em>put</em>, <span class="ipa">/ɔː/</span> <em>door</em>, <span class="ipa">/ɒ/</span> <em>clock</em>, <span class="ipa">/ɑː/</span> <em>car</em></li>
+        </ul>
+
+        <h3>Lip Rounding</h3>
+        <ul>
+            <li><strong>Rounded:</strong> <span class="ipa">/uː/</span>, <span class="ipa">/ʊ/</span>, <span class="ipa">/ɔː/</span>, <span class="ipa">/ɒ/</span> – lips pushed forward</li>
+            <li><strong>Unrounded:</strong> all front &amp; central vowels; also <span class="ipa">/ɑː/</span> (back but unrounded)</li>
+        </ul>
+
+        <h3>Length</h3>
+        <div class="vowel-grid">
+            <div class="v-item"><span class="badge" style="background:#dbeafe;">long</span> <span class="ipa">/iː/</span> <em>see</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/ɪ/</span> <em>sit</em></div>
+            <div class="v-item"><span class="badge" style="background:#dbeafe;">long</span> <span class="ipa">/ɜː/</span> <em>girl</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/e/</span> <em>bed</em></div>
+            <div class="v-item"><span class="badge" style="background:#dbeafe;">long</span> <span class="ipa">/ɑː/</span> <em>car</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/æ/</span> <em>cat</em></div>
+            <div class="v-item"><span class="badge" style="background:#dbeafe;">long</span> <span class="ipa">/ɔː/</span> <em>door</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/ʌ/</span> <em>cup</em></div>
+            <div class="v-item"><span class="badge" style="background:#dbeafe;">long</span> <span class="ipa">/uː/</span> <em>too</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/ɒ/</span> <em>clock</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/ʊ/</span> <em>put</em></div>
+            <div class="v-item"><span class="badge" style="background:#f1f5f9;">short</span> <span class="ipa">/ə/</span> <em>banana</em></div>
+        </div>
+        <div class="note">Long vowels (<span class="ipa">/ː/</span>) differ not only in duration but also in quality.</div>
+
+        <h3>Monophthong vs Diphthong</h3>
+        <ul>
+            <li><strong>Monophthong</strong> – steady quality: <span class="ipa">/iː/</span>, <span class="ipa">/e/</span>, <span class="ipa">/ɑː/</span>, <span class="ipa">/ʌ/</span>, <span class="ipa">/uː/</span>, etc.</li>
+            <li><strong>Diphthong</strong> – gliding quality: <span class="ipa">/eɪ/</span> <em>take</em>, <span class="ipa">/aɪ/</span> <em>five</em>, <span class="ipa">/əʊ/</span> <em>no</em>, <span class="ipa">/eə/</span> <em>care</em></li>
+        </ul>
+
+        <hr />
+
+        <!-- ===== TRANSCRIPTION LIST ===== -->
+        <h2>Transcription &middot; Important Words</h2>
+        <p class="text-muted">Common words with IPA (frequency in parentheses)</p>
+
+        <!-- High frequency -->
+        <h3>High frequency</h3>
+        <div class="trans-grid">
+            <div class="t-item"><span class="word">the</span> <span class="ipa">/ðə/</span> <span class="freq">13</span> <span class="text-muted" style="font-size:0.7rem;">(before cons.)</span></div>
+            <div class="t-item"><span class="word">the</span> <span class="ipa">/ðiː/</span> <span class="freq">13</span> <span class="text-muted" style="font-size:0.7rem;">(before vowel)</span></div>
+            <div class="t-item"><span class="word">I</span> <span class="ipa">/aɪ/</span> <span class="freq">9</span></div>
+            <div class="t-item"><span class="word">this</span> <span class="ipa">/ðɪs/</span> <span class="freq">7</span></div>
+            <div class="t-item"><span class="word">is</span> <span class="ipa">/ɪz/</span> <span class="freq">6</span></div>
+            <div class="t-item"><span class="word">you</span> <span class="ipa">/juː/</span> <span class="freq">6</span></div>
+            <div class="t-item"><span class="word">a</span> <span class="ipa">/ə/</span> <span class="freq">5</span></div>
+        </div>
+
+        <!-- Frequency 3 -->
+        <h3>Frequency 3</h3>
+        <div class="trans-grid">
+            <div class="t-item highlight"><span class="word">can't</span> <span class="ipa">/kɑːnt/</span> <span class="freq">3</span></div>
+            <div class="t-item highlight"><span class="word">got</span> <span class="ipa">/ɡɒt/</span> <span class="freq">3</span></div>
+            <div class="t-item highlight"><span class="word">window</span> <span class="ipa">/ˈwɪndəʊ/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">and</span> <span class="ipa">/ənd/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">at</span> <span class="ipa">/ət/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">bad</span> <span class="ipa">/bæd/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">in</span> <span class="ipa">/ɪn/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">it</span> <span class="ipa">/ɪt/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">my</span> <span class="ipa">/maɪ/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">out</span> <span class="ipa">/aʊt/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">she</span> <span class="ipa">/ʃiː/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">that</span> <span class="ipa">/ðæt/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">they</span> <span class="ipa">/ðeɪ/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">to</span> <span class="ipa">/tə/</span> <span class="freq">3</span></div>
+            <div class="t-item"><span class="word">was</span> <span class="ipa">/wəz/</span> <span class="freq">3</span></div>
+        </div>
+
+        <!-- Frequency 2 -->
+        <h3>Frequency 2</h3>
+        <div class="trans-grid">
+            <div class="t-item highlight"><span class="word">after</span> <span class="ipa">/ˈɑːftər/</span> <span class="freq">2</span></div>
+            <div class="t-item highlight"><span class="word">been</span> <span class="ipa">/biːn/</span> <span class="freq">2</span></div>
+            <div class="t-item highlight"><span class="word">broke</span> <span class="ipa">/brəʊk/</span> <span class="freq">2</span></div>
+            <div class="t-item highlight"><span class="word">shot</span> <span class="ipa">/ʃɒt/</span> <span class="freq">2</span></div>
+            <div class="t-item highlight"><span class="word">taught</span> <span class="ipa">/tɔːt/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">beat</span> <span class="ipa">/biːt/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">boy</span> <span class="ipa">/bɔɪ/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">by</span> <span class="ipa">/baɪ/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">can</span> <span class="ipa">/kən/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">had</span> <span class="ipa">/həd/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">he</span> <span class="ipa">/hiː/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">line</span> <span class="ipa">/laɪn/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">son</span> <span class="ipa">/sʌn/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">sun</span> <span class="ipa">/sʌn/</span> <span class="freq">2</span></div>
+            <div class="t-item"><span class="word">who</span> <span class="ipa">/huː/</span> <span class="freq">2</span></div>
+        </div>
+
+        <!-- Frequency 1 -->
+        <h3>Frequency 1</h3>
+        <div class="trans-grid">
+            <div class="t-item highlight"><span class="word">answer</span> <span class="ipa">/ˈɑːnsə/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">architect</span> <span class="ipa">/ˈɑːkɪtɛkt/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">bears</span> <span class="ipa">/bɛəz/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">broken</span> <span class="ipa">/ˈbrəʊkən/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">brother</span> <span class="ipa">/ˈbrʌðə/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">burnt</span> <span class="ipa">/bɜːnt/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">classes</span> <span class="ipa">/ˈklɑːsɪz/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">coat</span> <span class="ipa">/kəʊt/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">cold</span> <span class="ipa">/kəʊld/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">copied</span> <span class="ipa">/ˈkɒpid/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">crosswords</span> <span class="ipa">/ˈkrɒswɜːdz/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">ever</span> <span class="ipa">/ˈɛvə/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">exercises</span> <span class="ipa">/ˈeksəsaɪzɪz/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">go</span> <span class="ipa">/ɡəʊ/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">going</span> <span class="ipa">/ˈɡəʊɪŋ/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">gone</span> <span class="ipa">/ɡɒn/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">lot</span> <span class="ipa">/lɒt/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">morning</span> <span class="ipa">/ˈmɔːnɪŋ/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">most</span> <span class="ipa">/məʊst/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">mountains</span> <span class="ipa">/ˈmaʊntɪnz/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">necessary</span> <span class="ipa">/ˈnɛsəsəri/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">nobody</span> <span class="ipa">/ˈnəʊbədi/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">of</span> <span class="ipa">/əv/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">over</span> <span class="ipa">/ˈəʊvə/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">player</span> <span class="ipa">/ˈpleɪ.ər/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">repaired</span> <span class="ipa">/rɪˈpɛəd/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">students</span> <span class="ipa">/ˈstjuːdənts/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">tired</span> <span class="ipa">/ˈtaɪəd/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">understand</span> <span class="ipa">/ˌʌndəˈstænd/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">what</span> <span class="ipa">/wɒt/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">year</span> <span class="ipa">/jɪə/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">your</span> <span class="ipa">/jɔː/</span> <span class="freq">1</span></div>
+            <div class="t-item highlight"><span class="word">yourself</span> <span class="ipa">/jɔːˈsɛlf/</span> <span class="freq">1</span></div>
+        </div>
+
+        <div class="note border-top" style="margin-top:20px;">
+            <span class="badge" style="background:#fef9c3;">❗</span> Highlighted entries are words with non-obvious or irregular pronunciations — pay special attention!
+        </div>
+
+        <hr />
+
+        <div class="small-note" style="text-align:center; margin-top:16px;">
+            📖 Reference: English phonetics &amp; phonology &bull; Mobile ready
+        </div>
+
+    </div>
+
+</body>
+</html>

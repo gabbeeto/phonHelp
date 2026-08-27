@@ -1,0 +1,223 @@
+-What is phonetics?
+Phonetics is the study of how sounds are produced, transmitted and perceived. It deals with the physical properties of speech sounds.
+    Focuses on the production of sounds
+    A descriptive tool necessary for studying phonological aspects of a language
+    About the sounds of language
+
+-What is phonology?
+Phonology is the study of how sounds function in relation to each other in a language.
+    About the sound systems of language
+    Studies how sounds pattern and interact
+    Different from phonetics: phonetics = sounds of language, phonology = sound systems of language
+
+
+
+
+
+Bilabial sounds are produced when the lips are brought together.
+English sounds:
+	/p/ - voiceless (as in pay)
+	/b/ - voiced (as in bay)
+	/m/ - voiced (as in may)
+Labiodental sounds are made when the lower lip is raised towards the upper front teeth.
+English sounds:
+	/f/ - voiceless (as in safe)
+	/v/ - voiced (as in save)
+Dental sounds are produced by touching the upper front teeth with the tip of the tongue.
+English sounds:
+    /θ/ - voiceless (as in oath)
+    /ð/ - voiced (as in clothe)
+Alveolar sounds are made by raising the tip of the tongue towards the alveolar ridge (the ridge right behind the upper front teeth).
+English sounds:
+    /t, s/ - voiceless (as in too, sue)
+    /d, z, n, l, r/ - voiced (as in do, zoo, nook, look, rook)
+Palatoalveolar sounds are made by raising the blade of the tongue towards the part of the palate just behind the alveolar ridge.
+English sounds:
+    /ʃ, tʃ/ - voiceless (as in pressure, batch)
+    /ʒ, dʒ/ - voiced (as in pleasure, badge)
+Palatal sounds are produced further back towards the velum (similar to palatoalveolar).
+English sounds:
+    /j/ - voiced (as in yes, yellow, beauty, new)
+    This is the only palatal sound in English
+Velar sounds are made by raising the back of the tongue towards the soft palate (velum) .
+English sounds:
+    /k/ - voiceless (as in back)
+    /g, ŋ/ - voiced (as in bag, bang)
+    /w/ - velar with lip rounding (as in why)
+Glottal sounds are produced when the air passes through the glottis (the space between the vocal folds) as it is narrowed.
+English sounds:
+    /h/ - (as in high)
+    Also the glottal stop /ʔ/ (as in football pronounced with a complete closure of the glottis instead of /t/: [fu?bɔːl])
+
+
+
+
+
+
+
+Plosives are sounds in which there is a complete closure in the mouth, air is blocked for a fraction of a second, then released with a small burst of sound (plosion).
+English plosives:
+    Bilabial: /p/ (voiceless), /b/ (voiced) - park, bark
+    Alveolar: /t/ (voiceless), /d/ (voiced) - tar, dark
+    Velar: /k/ (voiceless), /g/ (voiced) - car, guard
+
+Fricatives have a closure which is not quite complete. The air is not blocked but there is enough obstruction to create friction noise.
+English fricatives:
+    Labiodental: /f/ (voiceless), /v/ (voiced) - wife, wives
+    Dental: /θ/ (voiceless), /ð/ (voiced) - breath, breathe
+    Alveolar: /s/ (voiceless), /z/ (voiced) - sink, zinc
+    Palatoalveolar: /ʃ/ (voiceless), /ʒ/ (voiced) - nation, evasion
+    Glottal: /h/ - help
+
+Affricates are a combination of a plosive and a fricative. They begin with a complete closure (like plosives) but have a slow release, moving to a place where friction can be heard.
+English affricates (both palatoalveolar):
+    /tʃ/ - voiceless (as in chin, rich)
+    /dʒ/ - voiced (as in gin, ridge)
+
+Nasals resemble plosives but the velum is lowered, allowing air to escape through the nasal cavity while there is complete closure in the mouth.
+English nasals (all voiced):
+    /m/ - Bilabial (as in ram)
+    /n/ - Alveolar (as in ran)
+    /ŋ/ - Velar (as in rang)
+
+Laterals are sounds where the air escapes around the sides of the tongue.
+English lateral:
+    /l/ - Voiced alveolar lateral
+    Has two versions:
+        "Clear l" - before vowels (as in light, long) - top of tongue raised
+        "Dark l" - in other positions (as in milk, ball) - back of tongue raised
+        Written as [ɫ] for dark l
+
+Approximants are sounds where the tongue only approaches the roof of the mouth, not enough obstruction to create friction. All are voiced.
+English approximants:
+    /r/ - Alveolar/Post-alveolar (as in right, brown)
+    /j/ - Palatal (as in use, youth)
+    /w/ - Velar/Labio-velar with lip rounding (as in why, twin, square)
+	Note: /r/ only occurs before vowels in Southern British English
+
+
+
+
+Vowel features:
+Vowels are classified according to:
+    Tongue height – how high in the mouth the tongue is
+		High (Close): Tongue is raised close to the roof of the mouth
+		    Examples: /iː/ (see), /ɪ/ (sit), /uː/ (too), /ʊ/ (put)
+		Mid: Tongue is halfway between high and low
+		    Examples: /e/ (bed), /ə/ (banana), /ɜː/ (girl), /ɔː/ (door)
+		Low (Open): Tongue is lowered, mouth is more open
+			Examples: /æ/ (cat), /ʌ/ (cup), /ɑː/ (car), /ɒ/ (clock)
+    Tongue backness – which part of the tongue is the highest (front, central, or back)
+			Front vowels: Tongue is raised towards the front of the mouth
+			    Examples: /iː/ (see), /ɪ/ (sit), /e/ (bed), /æ/ (cat)
+			Central vowels: Tongue is in the middle of the mouth
+			    Examples: /ɜː/ (girl), /ə/ (banana), /ʌ/ (cup)
+			Back vowels: Tongue is raised towards the back of the mouth
+			    Examples: /uː/ (too), /ʊ/ (put), /ɔː/ (door), /ɒ/ (clock), /ɑː/ (car)
+    Lip rounding – whether the lips are rounded or unrounded
+		Rounded vowels: Lips are pushed forward and rounded (like making an "o" shape)
+		    Examples: /uː/ (too), /ʊ/ (put), /ɔː/ (door), /ɒ/ (clock)
+		Unrounded vowels: Lips are spread or neutral (not rounded)
+		    Examples: /iː/ (see), /ɪ/ (sit), /e/ (bed), /æ/ (cat), /ɑː/ (car), /ʌ/ (cup), /ɜː/ (girl), /ə/ (banana)
+		Key pattern: All front and central vowels in English are unrounded; only back vowels can be rounded (though /ɑː/ is back but unrounded).
+    Length – whether the vowel is long or short
+		Long vowels (indicated by /ː/ in transcription):
+		    /iː/ – see
+		    /ɜː/ – girl
+		    /ɑː/ – car
+		    /ɔː/ – door
+		    /uː/ – too
+		Short vowels (no length mark):
+		    /ɪ/ – sit
+		    /e/ – bed
+		    /æ/ – cat
+		    /ʌ/ – cup
+		    /ɒ/ – clock
+		    /ʊ/ – put
+		    /ə/ – banana
+		Note: Length is not just about duration – long and short vowels also differ in quality (tongue position).
+    Monophthong vs Diphthong – whether the vowel quality is steady or changes
+		Monophthong (Pure Vowel):
+		    A vowel with a steady, unchanging quality throughout its production
+		    The tongue position remains fixed
+		    Examples: /iː/, /e/, /ɑː/, /ʌ/, /uː/ etc.
+		Diphthong (Gliding Vowel):
+		    A vowel where the quality changes during its production
+		    The tongue glides from one position to another within the same syllable
+		    Examples: /eɪ/ (take), /aɪ/ (five), /əʊ/ (no), /eə/ (care)	
+	
+transcription(important words to remember):
+	The (13): /ðə/(before consonant) o /ðiː/(before vowel)
+	i (9): /aɪ/
+	this (7): /ðɪs/
+	is (6): /ɪz/
+	you (6): /juː/
+	a (5): /ə/
+
+	!!!! can`t (3): /kɑːnt/ !!!!
+	!!!! got (3): /ɡɒt/ !!!!
+	!!!! window (3): /ˈwɪndəʊ/ !!!!
+
+	and (3): /ənd/
+	at (3): /ət /
+	bad (3): /bæd/
+	in (3): /ɪn/
+	it (3): /ɪt/
+	my (3): /maɪ/
+	out (3): /aʊt/
+	she (3): /ʃiː/
+	that (3): /ðæt/
+	they (3): /ðeɪ/
+	to (3): /tə/
+	was (3): /wəz/
+
+	!!!! after (2): /ˈɑːftər/ !!!!
+	!!!! been (2): /biːn/ !!!!
+	!!!! broke (2): /brəʊk/ !!!!
+	!!!! shot (2): /ʃɒt/ !!!!
+	!!!! taught (2): /tɔːt/ !!!!
+
+	beat (2): /biːt/
+	boy (2): /bɔɪ/
+	by (2): /baɪ/
+	can (2): /kən/
+	had (2): /həd/
+	he (2): /hiː/
+	line (2): /laɪn/
+	son (2): /sʌn/
+	sun (2): /sʌn/
+	who (2): /huː/
+
+	!!!! answer (1): /ˈɑːnsə/ !!!!
+	!!!! architect (1): /ˈɑːkɪtɛkt/ !!!!
+	!!!! bears (1): /bɛəz/ !!!!
+	!!!! broken (1): /ˈbrəʊkən/ !!!!
+	!!!! brother (1): /ˈbrʌðə/ !!!!
+	!!!! burnt (1): /bɜːnt/ !!!!
+	!!!! classes (1): /ˈklɑːsɪz/ !!!!
+	!!!! coat (1): /kəʊt/ !!!!
+	!!!! cold (1): /kəʊld/ !!!!
+	!!!! copied (1): /ˈkɒpid/ !!!!
+	!!!! crosswords (1): /ˈkrɒswɜːdz/ !!!!
+	!!!! ever (1): /ˈɛvə/ !!!!
+	!!!! exercises (1): /ˈeksəsaɪzɪz/ !!!!
+	!!!! go (1): /ɡəʊ/ !!!!
+	!!!! going (1): /ˈɡəʊɪŋ/ !!!!
+	!!!! gone (1): /ɡɒn/ !!!!
+	!!!! lot (1): /lɒt/ !!!!
+	!!!! morning (1): /ˈmɔːnɪŋ/ !!!!
+	!!!! most (1): /məʊst/ !!!!
+	!!!! mountains (1): /ˈmaʊntɪnz/ !!!!
+	!!!! necessary (1): /ˈnɛsəsəri/ !!!!
+	!!!! nobody (1): /ˈnəʊbədi/ !!!!
+	!!!! of (1): /əv/ !!!!
+	!!!! over (1): /ˈəʊvə/ !!!!
+	!!!! player (1): /ˈpleɪ.ər/ !!!!
+	!!!! repaired (1): /rɪˈpɛəd/ !!!!
+	!!!! students (1): /ˈstjuːdənts/ !!!!
+	!!!! tired (1): /ˈtaɪəd/ !!!!
+	!!!! understand (1): /ˌʌndəˈstænd/ !!!!
+	!!!! what (1): /wɒt/ !!!!
+	!!!! year (1): /jɪə/ !!!!
+	!!!! your (1): /jɔː/ !!!!
+	!!!! yourself (1): /jɔːˈsɛlf/ !!!!
