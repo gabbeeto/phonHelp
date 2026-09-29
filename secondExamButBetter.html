@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phonetics — Mock Exam Study Notes</title>
+<style>
+  :root{
+    --bg:#f6f6f4; --card:#fff; --fg:#17181a; --muted:#5f6470;
+    --line:#e4e5e1; --accent:#0d6b52;
+    --ipa: "Charis SIL","Doulos SIL","Gentium Plus","Lucida Sans Unicode","Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.62 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:780px; margin:0 auto; padding:18px 14px 70px}
+  header{padding:6px 0 10px}
+  h1{font-size:1.45rem; margin:0 0 4px; letter-spacing:-.01em}
+  .sub{margin:0; color:var(--muted); font-size:.88rem}
+
+  nav.toc{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:12px 15px; margin:10px 0 20px}
+  nav.toc h2{font-size:.72rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); margin:0 0 8px; border:0; padding:0}
+  nav.toc ol{margin:0; padding-left:1.3em; font-size:.92rem}
+  nav.toc li{margin:4px 0}
+
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  section{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 15px; margin:0 0 16px; scroll-margin-top:12px}
+  h2{font-size:1.08rem; margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--line)}
+  h3{font-size:.97rem; margin:18px 0 6px; color:var(--accent)}
+  h3:first-of-type{margin-top:10px}
+  p{margin:9px 0}
+  ul,ol{margin:9px 0; padding-left:1.25em}
+  li{margin:4px 0}
+
+  .ipa,.from,.to,code{font-family:var(--ipa)}
+
+  /* plain example list */
+  ul.ex{list-style:none; padding:0; margin:8px 0}
+  ul.ex li{padding:7px 0; border-bottom:1px dashed var(--line); font-size:.94rem; font-family:var(--ipa)}
+  ul.ex li:last-child{border-bottom:0}
+  .from{color:var(--muted)}
+  .to{font-weight:650; color:var(--accent)}
+
+  /* grouped assimilation rules */
+  .rule-block{
+    font-family:var(--ipa);
+    font-size:.93rem;
+    line-height:1.65;
+    margin:10px 0 16px;
+  }
+  .rule-first{margin:0}
+  .rule-first b{color:var(--accent); font-weight:700; margin-right:.55em}
+  .rule-cont{margin:0; padding-left:2.3em}
+  .rule-first .to, .rule-cont .to{font-weight:650; color:var(--accent)}
+
+  /* transcription hints */
+  ol.hints{padding-left:1.35em}
+  ol.hints li{margin:8px 0; font-size:.94rem}
+
+  .note{background:#fff8e8; border-left:3px solid #e0a100; padding:9px 11px; border-radius:0 8px 8px 0; font-size:.9rem; margin:11px 0}
+  .tip{background:#eef2fb; border-left:3px solid #3b5bdb; padding:9px 11px; border-radius:0 8px 8px 0; font-size:.9rem; margin:11px 0}
+
+  footer{text-align:center; color:var(--muted); font-size:.8rem; padding:10px 0 0}
+
+  @media print{
+    body{background:#fff}
+    section,nav.toc{border-color:#ccc; break-inside:avoid}
+    a{color:var(--fg)}
+  }
+  img{
+width: 100%;
+    
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Phonetics — Mock Exam</h1>
+    <p class="sub">Second term · answers, extra examples &amp; explanations</p>
+  </header>
+
+  <nav class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#q1">Function words vs. Content words</a></li>
+      <li><a href="#q5">Citation form vs. Connected speech</a></li>
+      <li><a href="#link">Linking</a></li>
+      <li><a href="#gem">Gemination</a></li>
+      <li><a href="#assim">Assimilation</a></li>
+      <li><a href="#r">Intrusive R &amp; Linking R</a></li>
+      <li><a href="#hints">Transcription hints</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- 1 · Function vs Content words -->
+    <section id="q1">
+      <h2>1 · Function words vs. Content words</h2>
+
+      <p><strong>Content words</strong> (also called <em>lexical</em> words) carry the core meaning of the
+      sentence — the “dictionary” information. They are an <em>open class</em>: new ones are created all the
+      time (<em>internet, selfie, download</em>). Nouns, main verbs, adjectives and adverbs belong here.
+      They are normally <strong>stressed</strong> and keep their <strong>full vowel</strong> sounds.</p>
+
+      <p><strong>Function words</strong> (also called <em>grammatical</em> words) carry very little meaning on
+      their own; they exist to show the grammatical relationships between the content words. They are a
+      <em>closed class</em>: articles, prepositions, pronouns, auxiliaries, conjunctions, determiners and
+      particles. They are normally <strong>unstressed</strong> and appear in <strong>weak forms</strong> with a
+      reduced vowel (usually /ə/ or /ɪ/).</p>
+
+      <h3>Examples</h3>
+      <ul class="ex">
+        <li>Content: table <span class="from">/ˈteɪbl̩/</span> · running <span class="from">/ˈrʌnɪŋ/</span> · beautiful <span class="from">/ˈbjuːtɪfl̩/</span> · quickly <span class="from">/ˈkwɪkli/</span></li>
+        <li>Function (strong → weak): and <span class="from">/ænd/ → /ənd/ → /ən/</span></li>
+        <li>of <span class="from">/ɒv/ → /əv/</span> · for <span class="from">/fɔː/ → /fə/</span> · to <span class="from">/tuː/ → /tə/</span></li>
+        <li>can <span class="from">/kæn/ → /kən/</span> · have <span class="from">/hæv/ → /əv/</span> · but <span class="from">/bʌt/ → /bət/</span></li>
+      </ul>
+
+      <h3>Main differences</h3>
+      <ul>
+        <li><strong>Meaning:</strong> content = lexical meaning; function = grammatical meaning.</li>
+        <li><strong>Class:</strong> content = open (new words appear); function = closed (fixed list).</li>
+        <li><strong>Stress:</strong> content words are usually stressed; function words are usually unstressed.</li>
+        <li><strong>Vowels:</strong> content words keep full vowels; function words reduce to weak forms.</li>
+        <li><strong>Connected speech:</strong> function words are the ones most affected by assimilation
+            and linking (e.g. <em>ten players</em> → <span class="ipa">/tem pleɪəz/</span>).</li>
+      </ul>
+
+      <div class="note">A function word <em>can</em> take stress when it is contrasted:
+      <em>“I said give it <strong>to</strong> me, not <strong>from</strong> me.”</em></div>
+    </section>
+
+    <!-- 2 · Citation vs Connected -->
+    <section id="q5">
+      <h2>2 · Citation form vs. Connected speech</h2>
+
+      <p><strong>Citation form</strong> is the isolated pronunciation of a word — the way it appears in a
+      dictionary. It is produced slowly, carefully and with clear articulation, with the word's full (strong)
+      form and full vowels, and with no influence from neighbouring sounds.</p>
+
+      <p><strong>Connected speech</strong> is how words are actually pronounced in everyday, natural
+      conversation. Words are not produced one by one; they form a continuous sequence of sounds in which each
+      sound is affected by the sounds around it. This produces:</p>
+
+      <ul>
+        <li><strong>Assimilation</strong> — <em>ten players</em> <span class="ipa">/ten ˈpleɪəz/ → /tem ˈpleɪəz/</span></li>
+        <li><strong>Linking</strong> — <em>an apple</em> <span class="ipa">/əˈnæpl̩/</span></li>
+        <li><strong>Weak forms</strong> — <em>and</em> <span class="ipa">/ænd/ → /ən/</span></li>
+        <li><strong>Gemination</strong> — <em>black cat</em> <span class="ipa">/blækːæt/</span></li>
+      </ul>
+
+      <div class="tip"><strong>In one sentence:</strong> citation form is one word alone, slow and complete;
+      connected speech is many words together, fast and adapted to each other.</div>
+    </section>
+
+    <!-- 3 · Linking -->
+    <section id="link">
+      <h2>3 · Linking</h2>
+
+      <p><strong>Linking</strong> (also called <em>liaison</em>) is the smooth joining of the final consonant
+      of one word to the initial vowel of the next word, inside the same thought group. Instead of stopping
+      after each word, the speaker pronounces the final consonant as if it began the following word, so the
+      speech flows continuously.</p>
+
+      <p>The pattern is: <strong>consonant + vowel (C + V)</strong> across a word boundary.</p>
+
+      <ul class="ex">
+        <li>an apple <span class="from">/ən ˈæpl̩/</span> → <span class="to">/əˈnæpl̩/</span></li>
+        <li>turn it off <span class="from">/tɜːn ɪt ɒf/</span> → <span class="to">/ˈtɜːnɪtɒf/</span></li>
+        <li>pick it up <span class="from">/pɪk ɪt ʌp/</span> → <span class="to">/pɪkɪtʌp/</span></li>
+        <li>not at all <span class="from">/nɒt ət ɔːl/</span> → <span class="to">/nɒtətɔːl/</span></li>
+        <li>come in <span class="from">/kʌm ɪn/</span> → <span class="to">/kʌˈmɪn/</span></li>
+        <li>find out <span class="from">/faɪnd aʊt/</span> → <span class="to">/faɪnˈdaʊt/</span></li>
+        <li>take it easy <span class="from">/teɪk ɪt ˈiːzi/</span> → <span class="to">/teɪkɪtˈiːzi/</span></li>
+        <li>leave it alone <span class="from">/liːv ɪt əˈləʊn/</span> → <span class="to">/liːvɪtəˈləʊn/</span></li>
+      </ul>
+
+      <div class="tip">Linking is one of the “smoothing” processes of connected speech, together with
+      <strong>assimilation</strong> (sounds change).</div>
+    </section>
+
+    <!-- 4 · Gemination -->
+    <section id="gem">
+      <h2>4 · Gemination</h2>
+
+      <p><strong>Gemination</strong> (also called <em>twinning</em> or <em>doubling</em>) happens when the same
+      consonant sound ends one word and begins the next one. Instead of pronouncing two separate consonants,
+      the speaker holds the articulation once and lengthens it — the two sounds merge into one long
+      consonant.</p>
+
+      <ul class="ex">
+        <li>black cat <span class="from">/blæk kæt/</span> → <span class="to">/blækːæt/</span></li>
+        <li>big game <span class="from">/bɪg geɪm/</span> → <span class="to">/bɪgːeɪm/</span></li>
+        <li>hot tea <span class="from">/hɒt tiː/</span> → <span class="to">/hɒtːiː/</span></li>
+        <li>good day <span class="from">/gʊd deɪ/</span> → <span class="to">/gʊdːeɪ/</span></li>
+        <li>some money <span class="from">/sʌm ˈmʌni/</span> → <span class="to">/sʌmːʌni/</span></li>
+        <li>ten nails <span class="from">/ten neɪlz/</span> → <span class="to">/tenːeɪlz/</span></li>
+        <li>this Saturday <span class="from">/ðɪs ˈsætədeɪ/</span> → <span class="to">/ðɪsːætədeɪ/</span></li>
+        <li>book case <span class="from">/bʊk keɪs/</span> → <span class="to">/bʊkːeɪs/</span></li>
+        <li>night time <span class="from">/naɪt taɪm/</span> → <span class="to">/naɪtːaɪm/</span></li>
+      </ul>
+
+      <div class="note">Gemination can also happen inside a single word:
+      <em>unnamed</em> <span class="ipa">/ʌnˈneɪmd/</span>, <em>bookkeeper</em>
+      <span class="ipa">/ˈbʊkkiːpə/</span>, <em>meanness</em> <span class="ipa">/ˈmiːnnəs/</span>.</div>
+    </section>
+
+    <!-- 5 · Assimilation -->
+    <section id="assim">
+      <h2>5 · Assimilation</h2>
+
+      <p><strong>Assimilation</strong> is the process by which a sound changes in order to become more like a
+      neighbouring sound. It makes speech smoother and easier to pronounce, because the articulators do not
+      have to move as far or as fast between two positions. The change is usually in the
+      <strong>place of articulation</strong>, but it can also affect <strong>voicing</strong>.</p>
+
+      <p>When the second sound influences the first one, the assimilation is
+      <strong>regressive</strong> (or anticipatory) — this is the most common type in English. When the first
+      sound influences the second, it is <strong>progressive</strong>.</p>
+
+      <h3>Bilabialization</h3>
+
+      <div class="rule-block">
+        <p class="rule-first"><b>/d/ + /p,m,b/ = /b/</b> bad men /bæd men/ → <span class="to">/bæb men/</span></p>
+        <p class="rule-cont">good morning /gʊd ˈmɔːnɪŋ/ → <span class="to">/gʊb ˈmɔːnɪŋ/</span></p>
+        <p class="rule-cont">red pen /red pen/ → <span class="to">/reb pen/</span></p>
+        <p class="rule-cont">good boy /gʊd bɔɪ/ → <span class="to">/gʊb bɔɪ/</span></p>
+        <p class="rule-cont">handbag /ˈhændbæg/ → <span class="to">/ˈhæmbæg/</span></p>
+      </div>
+      <img src="imgs/img0.png" >
+
+      <div class="rule-block">
+        <p class="rule-first"><b>/t/ + /p,m,b/ = /p/</b> that man /ðæt mæn/ → <span class="to">/ðæp mæn/</span></p>
+        <p class="rule-cont">that boy /ðæt bɔɪ/ → <span class="to">/ðæp bɔɪ/</span></p>
+        <p class="rule-cont">white paper /waɪt ˈpeɪpə/ → <span class="to">/waɪp ˈpeɪpə/</span></p>
+        <p class="rule-cont">don't be late /dəʊnt biː leɪt/ → <span class="to">/dəʊmp biː leɪt/</span></p>
+      </div>
+
+      <img src="./imgs/img1.png" >
+      <div class="rule-block">
+        <p class="rule-first"><b>/n,ŋ/ + /p,m,b/ = /m/</b> ten players /ten ˈpleɪəz/ → <span class="to">/tem ˈpleɪəz/</span></p>
+        <p class="rule-cont">in my /ɪn maɪ/ → <span class="to">/ɪm maɪ/</span></p>
+        <p class="rule-cont">one moment /wʌn ˈməʊmənt/ → <span class="to">/wʌm ˈməʊmənt/</span></p>
+        <p class="rule-cont">can be /kæn biː/ → <span class="to">/kæm biː/</span></p>
+      </div>
+
+      <img src="./imgs/img2.png" >
+      <h3>Alveolarization</h3>
+
+      <div class="rule-block">
+        <p class="rule-first"><b>/ŋ/ + /t,d,n/ = /n/</b> learning to drive /ˈlɜːnɪŋ tə draɪv/ → <span class="to">/ˈlɜːnɪntə draɪv/</span></p>
+        <p class="rule-cont">going to /ˈgəʊɪŋ tə/ → <span class="to">/ˈgəʊɪntə/</span></p>
+        <p class="rule-cont">wrong number /rɒŋ ˈnʌmbə/ → <span class="to">/rɒn ˈnʌmbə/</span></p>
+        <p class="rule-cont">sing to me /sɪŋ tə miː/ → <span class="to">/sɪn tə miː/</span></p>
+        <p class="rule-cont">long time /lɒŋ taɪm/ → <span class="to">/lɒn taɪm/</span></p>
+        <p class="rule-cont">long day /lɒŋ deɪ/ → <span class="to">/lɒn deɪ/</span></p>
+        <p class="rule-cont">kingdom /ˈkɪŋdəm/ → <span class="to">/ˈkɪndəm/</span></p>
+        <p class="rule-cont">something to eat /ˈsʌmθɪŋ tə iːt/ → <span class="to">/ˈsʌmθɪn tə iːt/</span></p>
+      </div>
+
+
+      <img src="./imgs/img3.png" >
+      <h3>Palato-alveolarization</h3>
+
+      <div class="rule-block">
+        <p class="rule-first"><b>/d/ + /j/ = /dʒ/</b> did you /dɪd juː/ → <span class="to">/dɪdʒuː/</span></p>
+        <p class="rule-cont">would you /wʊd juː/ → <span class="to">/wʊdʒuː/</span></p>
+        <p class="rule-cont">could you /kʊd juː/ → <span class="to">/kʊdʒuː/</span></p>
+        <p class="rule-cont">need you /niːd juː/ → <span class="to">/niːdʒuː/</span></p>
+      </div>
+
+
+      <img src="./imgs/img4.png" >
+      <div class="rule-block">
+        <p class="rule-first"><b>/t/ + /j/ = /tʃ/</b> want you /wɒnt juː/ → <span class="to">/wɒntʃuː/</span></p>
+        <p class="rule-cont">don't you /dəʊnt juː/ → <span class="to">/dəʊntʃuː/</span></p>
+        <p class="rule-cont">can't you /kɑːnt juː/ → <span class="to">/kɑːntʃuː/</span></p>
+        <p class="rule-cont">meet you /miːt juː/ → <span class="to">/miːtʃuː/</span></p>
+        <p class="rule-cont">last year /lɑːst jɪə/ → <span class="to">/lɑːstʃɪə/</span></p>
+      </div>
+
+
+      <img src="./imgs/img5.png" >
+      <div class="rule-block">
+        <p class="rule-first"><b>/s/ + /ʃ,tʃ,dʒ,j/ = /ʃ/</b> this shop /ðɪs ʃɒp/ → <span class="to">/ðɪʃɒp/</span></p>
+        <p class="rule-cont">miss you /mɪs juː/ → <span class="to">/mɪʃuː/</span></p>
+        <p class="rule-cont">this year /ðɪs jɪə/ → <span class="to">/ðɪʃɪə/</span></p>
+        <p class="rule-cont">nice shoes /naɪs ʃuːz/ → <span class="to">/naɪʃuːz/</span></p>
+      </div>
+
+      <img src="./imgs/img6.png" >
+
+      <div class="rule-block">
+        <p class="rule-first"><b>/z/ + /ʃ,tʃ,j/ = /ʒ/</b> has she /hæz ʃiː/ → <span class="to">/hæʒʃiː/</span></p>
+        <p class="rule-cont">does she /dʌz ʃiː/ → <span class="to">/dʌʒʃiː/</span></p>
+        <p class="rule-cont">as you like /əz juː laɪk/ → <span class="to">/əʒuː laɪk/</span></p>
+        <p class="rule-cont">is your /ɪz jɔː/ → <span class="to">/ɪʒɔː/</span></p>
+      </div>
+
+
+      <img src="./imgs/img7.png" >
+      <h3>Velarization</h3>
+
+      <div class="rule-block">
+        <p class="rule-first"><b>/t/ + /k,g/ = /k/</b> that girl /ðæt gɜːl/ → <span class="to">/ðæk gɜːl/</span></p>
+        <p class="rule-cont">white coat /waɪt kəʊt/ → <span class="to">/waɪk kəʊt/</span></p>
+        <p class="rule-cont">hot cakes /hɒt keɪks/ → <span class="to">/hɒk keɪks/</span></p>
+        <p class="rule-cont">it came /ɪt keɪm/ → <span class="to">/ɪk keɪm/</span></p>
+        <p class="rule-cont">sweet girl /swiːt gɜːl/ → <span class="to">/swiːk gɜːl/</span></p>
+      </div>
+
+      <img src="./imgs/img8.png" >
+      <div class="rule-block">
+        <p class="rule-first"><b>/d/ + /k,g/ = /g/</b> good guy /gʊd gaɪ/ → <span class="to">/gʊg gaɪ/</span></p>
+        <p class="rule-cont">red car /red kɑː/ → <span class="to">/reg kɑː/</span></p>
+        <p class="rule-cont">bad cold /bæd kəʊld/ → <span class="to">/bæg kəʊld/</span></p>
+        <p class="rule-cont">could go /kʊd gəʊ/ → <span class="to">/kʊg gəʊ/</span></p>
+      </div>
+
+
+      <img src="./imgs/img9.png" >
+      <div class="rule-block">
+        <p class="rule-first"><b>/n/ + /k,g/ = /ŋ/</b> ten cups /ten kʌps/ → <span class="to">/teŋ kʌps/</span></p>
+        <p class="rule-cont">in case /ɪn keɪs/ → <span class="to">/ɪŋ keɪs/</span></p>
+        <p class="rule-cont">sun cream /sʌn kriːm/ → <span class="to">/sʌŋ kriːm/</span></p>
+        <p class="rule-cont">green grass /griːn grɑːs/ → <span class="to">/griːŋ grɑːs/</span></p>
+        <p class="rule-cont">own goal /əʊn gəʊl/ → <span class="to">/əʊŋ gəʊl/</span></p>
+      </div>
+
+      <img src="./imgs/img10.png" >
+    </section>
+
+    <!-- 6 · Intrusive R & Linking R -->
+    <section id="r">
+      <h2>6 · Intrusive R and Linking R</h2>
+
+      <h3>Linking R</h3>
+      <p>The word is spelled with an <strong>“r”</strong> (or “re”) at the end — <em>far, four, here, better,
+      mother</em>. Said alone, or before a consonant, the /r/ is silent. But when the next word begins with a
+      <strong>vowel</strong>, that /r/ is pronounced and “links” the two words together. The /r/ was always
+      historically there; it is simply kept.</p>
+
+      <ul class="ex">
+        <li>far away <span class="from">/fɑː əˈweɪ/</span> → <span class="to">/fɑːr əˈweɪ/</span></li>
+        <li>four apples <span class="from">/fɔː ˈæpl̩z/</span> → <span class="to">/fɔːr ˈæpl̩z/</span></li>
+        <li>here and there <span class="from">/hɪə ənd ðeə/</span> → <span class="to">/hɪər ənd ðeə/</span></li>
+        <li>better and better <span class="from">/ˈbetə ənd ˈbetə/</span> → <span class="to">/ˈbetər ənd ˈbetə/</span></li>
+        <li>mother and father <span class="from">/ˈmʌðə ənd ˈfɑːðə/</span> → <span class="to">/ˈmʌðər ənd ˈfɑːðə/</span></li>
+        <li>her own <span class="from">/hɜː əʊn/</span> → <span class="to">/hɜːr əʊn/</span></li>
+        <li>your uncle <span class="from">/jɔː ˈʌŋkl̩/</span> → <span class="to">/jɔːr ˈʌŋkl̩/</span></li>
+        <li>more or less <span class="from">/mɔː ɔː les/</span> → <span class="to">/mɔːr ɔː les/</span></li>
+        <li>after all <span class="from">/ˈɑːftə ɔːl/</span> → <span class="to">/ˈɑːftər ɔːl/</span></li>
+        <li>a pair of shoes <span class="from">/ə peə əv ʃuːz/</span> → <span class="to">/ə peər əv ʃuːz/</span></li>
+      </ul>
+
+      <h3>Intrusive R</h3>
+      <p>Here there is <strong>no “r” in the spelling at all</strong>. When a word ends in a vowel sound
+      (usually /ə/, /ɑː/, /ɔː/, /ɪə/, /eə/) and the next word begins with a vowel, speakers insert an /r/ by
+      analogy with the linking-r rule, to avoid an awkward break between two vowels.</p>
+
+      <ul class="ex">
+        <li>law and order <span class="from">/lɔː ənd ˈɔːdə/</span> → <span class="to">/lɔːr ənd ˈɔːdə/</span></li>
+        <li>the idea of it <span class="from">/ði aɪˈdɪə əv ɪt/</span> → <span class="to">/ði aɪˈdɪər əv ɪt/</span></li>
+        <li>China and India <span class="from">/ˈtʃaɪnə ənd ˈɪndɪə/</span> → <span class="to">/ˈtʃaɪnər ənd ˈɪndɪə/</span></li>
+        <li>I saw it <span class="from">/aɪ sɔː ɪt/</span> → <span class="to">/aɪ sɔːr ɪt/</span></li>
+        <li>drawing <span class="from">/ˈdrɔːɪŋ/</span> → <span class="to">/ˈdrɔːrɪŋ/</span></li>
+        <li>vanilla ice cream <span class="from">/vəˈnɪlə aɪs kriːm/</span> → <span class="to">/vəˈnɪlər aɪs kriːm/</span></li>
+        <li>media event <span class="from">/ˈmiːdɪə ɪvent/</span> → <span class="to">/ˈmiːdɪər ɪvent/</span></li>
+        <li>Anna and Paul <span class="from">/ˈænə ənd pɔːl/</span> → <span class="to">/ˈænər ənd pɔːl/</span></li>
+        <li>the sofa is new <span class="from">/ðə ˈsəʊfə ɪz njuː/</span> → <span class="to">/ðə ˈsəʊfər ɪz njuː/</span></li>
+      </ul>
+
+      <h3>Linking R vs. Intrusive R — the difference</h3>
+      <ul>
+        <li><strong>Linking R:</strong> the “r” <em>exists in the spelling</em> — it is an underlying /r/ that
+            is simply not pronounced in isolation. Pronouncing it before a vowel is “linking”.</li>
+        <li><strong>Intrusive R:</strong> there is <em>no “r” in the spelling</em> — the /r/ is added by
+            analogy, to smooth the vowel-to-vowel transition.</li>
+        <li>Both happen in the <strong>same environment</strong> (word ending in a vowel + word beginning with
+            a vowel).</li>
+      </ul>
+
+      <div class="tip"><strong>Related glides:</strong> English also inserts /j/ and /w/ between vowels —
+      <em>the end</em> <span class="ipa">/ði jend/</span>, <em>I always</em> <span class="ipa">/aɪ jɔːlweɪz/</span>,
+      <em>go on</em> <span class="ipa">/gəʊ wɒn/</span>, <em>you are</em> <span class="ipa">/juː wɑː/</span>.
+      /j/ appears after /iː, ɪ, eɪ, aɪ, ɔɪ/ and /w/ after /uː, ʊ, əʊ, aʊ/; intrusive /r/ appears after
+      /ə, ɑː, ɔː, ɪə, eə/.</div>
+    </section>
+
+    <!-- 7 · Transcription hints -->
+    <section id="hints">
+      <h2>7 · Transcription hints</h2>
+
+      <p>Practical tips for making transcriptions, so you make sure you don’t mess up:</p>
+
+      <ol class="hints">
+        <li>Use <strong>/ /</strong> for broad (phonemic) and <strong>[ ]</strong> for narrow (allophonic)
+            transcription.</li>
+        <li>Always mark primary stress <strong>ˈ</strong> before the stressed syllable.</li>
+        <li>Transcribe what you <em>hear</em>, not the spelling (for example ‘going to’ =
+            <span class="ipa">/ˈɡəʊɪŋ tə/</span>).</li>
+        <li>There are no capital letters, commas, full stops/periods, question marks in transcriptions.</li>
+        <li>The symbol <strong>|</strong> is used to mark a point where a speaker of the text might introduce a
+            brief pause. Oftentimes this coincides with a place where a punctuation mark is present on the
+            text, but not always.</li>
+        <li><strong>*</strong> is used to indicate that the following word is a name.</li>
+        <li>Many words in connected speech are pronounced (and should be transcribed) differently in different
+            environments.</li>
+        <li>Be careful to think about how speech sounds and to avoid being misled by the spelling.</li>
+        <li>Sometimes the ordinary spelling version uses letters which do not correspond to any sound at all,
+            so they shouldn’t appear in transcription.</li>
+      </ol>
+
+      <div class="tip"><strong>Quick reference:</strong> <br> / / = broad (phonemic) <br> [ ] = narrow (allophonic) <br>
+      ˈ = primary stress <br>  | = brief pause <br> * = the next word is a name.</div>
+    </section>
+
+  </main>
+
+  <footer>
+    Phonetics · Second term mock exam — study sheet
+  </footer>
+
+</div>
+</body>
+</html>
