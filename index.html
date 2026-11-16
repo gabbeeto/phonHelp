@@ -373,6 +373,121 @@
         grid-template-columns: 1fr
       }
     }
+
+    /* ── weak forms transcription table (extra0) ── */
+    .wf-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card)
+    }
+
+    .wf-table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      font-size: .86rem
+    }
+
+    .wf-table th,
+    .wf-table td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top
+    }
+
+    .wf-table th {
+      background: #f0f0f0;
+      font-weight: 600;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 2
+    }
+
+    .wf-table tbody tr:last-child td {
+      border-bottom: 0
+    }
+
+    .wf-table tr.us-diff {
+      background: #fff3e0
+    }
+
+    .wf-table tr.us-diff td:first-child {
+      border-left: 3px solid #ff9800
+    }
+
+    .wf-table .rank {
+      text-align: center;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap
+    }
+
+    .wf-table .ipa {
+      font-family: var(--ipa);
+      font-size: .9rem;
+      white-space: nowrap;
+      background: none;
+      padding: 0;
+      font-weight: 400
+    }
+
+    .wf-table td:first-child {
+      font-weight: 600;
+      min-width: 90px
+    }
+
+    .us-badge {
+      display: inline-block;
+      background: #ff9800;
+      color: #fff;
+      font-size: .6rem;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-left: 5px;
+      vertical-align: middle;
+      font-weight: 600;
+      letter-spacing: .03em
+    }
+
+    .wf-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 12px;
+      font-size: .82rem;
+      align-items: center;
+      color: var(--muted)
+    }
+
+    .wf-legend .dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border-left: 3px solid #ff9800;
+      background: #fff3e0;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px
+    }
+
+    @media (max-width:480px) {
+      .wf-table {
+        font-size: .8rem
+      }
+
+      .wf-table th,
+      .wf-table td {
+        padding: 6px 7px
+      }
+
+      .wf-table td:first-child {
+        min-width: 75px
+      }
+    }
   </style>
 </head>
 
@@ -404,6 +519,14 @@
         <li><a href="#hints">Transcription hints</a></li>
       </ol>
     </nav>
+
+    <nav class="toc">
+      <h2>Contenido extra</h2>
+      <ol>
+        <li><a href="#extra0">Transcription for Brittish Weak Forms words + Standard US Equivalents </a></li>
+      </ol>
+    </nav>
+
 
 
     <main>
@@ -1077,6 +1200,1526 @@
         <div class="tip"><strong>Quick reference:</strong> <br> / / = broad (phonemic) <br> [ ] = narrow (allophonic)
           <br>
           ˈ = primary stress <br> | = brief pause <br> * = the next word is a name.</div>
+      </section>
+
+      <!-- ══════════ EXTRA · Weak forms transcription ══════════ -->
+      <section id="extra0">
+        <h2>Transcription for Brittish Weak Forms words + Standard US Equivalents</h2>
+
+        <div class="note">
+          <strong><span class="us-badge">US</span> Highlighted rows</strong> = different pronunciation in American English.
+        </div>
+
+
+        <div class="wf-wrap">
+          <table class="wf-table">
+            <thead>
+              <tr>
+                <th>Word</th>
+                <th>Rank</th>
+                <th>RP (Weak Form)</th>
+                <th>US Equivalent</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- TOP 100 -->
+              <tr>
+                <td>the</td>
+                <td class="rank">1</td>
+                <td class="ipa">/ðə/</td>
+                <td class="ipa">/ðə/</td>
+              </tr>
+              <tr>
+                <td>be</td>
+                <td class="rank">2</td>
+                <td class="ipa">/bi/</td>
+                <td class="ipa">/bi/</td>
+              </tr>
+              <tr>
+                <td>to</td>
+                <td class="rank">3</td>
+                <td class="ipa">/tə/</td>
+                <td class="ipa">/tə/</td>
+              </tr>
+              <tr>
+                <td>and</td>
+                <td class="rank">4</td>
+                <td class="ipa">/ən/</td>
+                <td class="ipa">/ən/</td>
+              </tr>
+              <tr>
+                <td>a</td>
+                <td class="rank">5</td>
+                <td class="ipa">/ə/</td>
+                <td class="ipa">/ə/</td>
+              </tr>
+              <tr>
+                <td>of</td>
+                <td class="rank">6</td>
+                <td class="ipa">/əv/</td>
+                <td class="ipa">/əv/</td>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td class="rank">7</td>
+                <td class="ipa">/aɪ/</td>
+                <td class="ipa">/aɪ/</td>
+              </tr>
+              <tr>
+                <td>in</td>
+                <td class="rank">8</td>
+                <td class="ipa">/ɪn/</td>
+                <td class="ipa">/ɪn/</td>
+              </tr>
+              <tr>
+                <td>that</td>
+                <td class="rank">9</td>
+                <td class="ipa">/ðət/</td>
+                <td class="ipa">/ðət/</td>
+              </tr>
+              <tr>
+                <td>you</td>
+                <td class="rank">10</td>
+                <td class="ipa">/jə/</td>
+                <td class="ipa">/jə/</td>
+              </tr>
+              <tr>
+                <td>have</td>
+                <td class="rank">11</td>
+                <td class="ipa">/həv/</td>
+                <td class="ipa">/həv/</td>
+              </tr>
+              <tr>
+                <td>it</td>
+                <td class="rank">12</td>
+                <td class="ipa">/ɪt/</td>
+                <td class="ipa">/ɪt/</td>
+              </tr>
+              <tr>
+                <td>do</td>
+                <td class="rank">13</td>
+                <td class="ipa">/də/</td>
+                <td class="ipa">/də/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>for <span class="us-badge">US</span></td>
+                <td class="rank">14</td>
+                <td class="ipa">/fə/</td>
+                <td class="ipa">/fər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>on <span class="us-badge">US</span></td>
+                <td class="rank">15</td>
+                <td class="ipa">/ɒn/</td>
+                <td class="ipa">/ɑːn/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>with <span class="us-badge">US</span></td>
+                <td class="rank">16</td>
+                <td class="ipa">/wɪð/</td>
+                <td class="ipa">/wɪθ/</td>
+              </tr>
+              <tr>
+                <td>he</td>
+                <td class="rank">17</td>
+                <td class="ipa">/hi/</td>
+                <td class="ipa">/hi/</td>
+              </tr>
+              <tr>
+                <td>this</td>
+                <td class="rank">18</td>
+                <td class="ipa">/ðɪs/</td>
+                <td class="ipa">/ðɪs/</td>
+              </tr>
+              <tr>
+                <td>as</td>
+                <td class="rank">19</td>
+                <td class="ipa">/əz/</td>
+                <td class="ipa">/əz/</td>
+              </tr>
+              <tr>
+                <td>we</td>
+                <td class="rank">20</td>
+                <td class="ipa">/wi/</td>
+                <td class="ipa">/wi/</td>
+              </tr>
+              <tr>
+                <td>but</td>
+                <td class="rank">21</td>
+                <td class="ipa">/bət/</td>
+                <td class="ipa">/bət/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>not <span class="us-badge">US</span></td>
+                <td class="rank">22</td>
+                <td class="ipa">/nɒt/</td>
+                <td class="ipa">/nɑːt/</td>
+              </tr>
+              <tr>
+                <td>they</td>
+                <td class="rank">23</td>
+                <td class="ipa">/ðeɪ/</td>
+                <td class="ipa">/ðeɪ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>what <span class="us-badge">US</span></td>
+                <td class="rank">24</td>
+                <td class="ipa">/wɒt/</td>
+                <td class="ipa">/wʌt/</td>
+              </tr>
+              <tr>
+                <td>at</td>
+                <td class="rank">25</td>
+                <td class="ipa">/ət/</td>
+                <td class="ipa">/ət/</td>
+              </tr>
+              <tr>
+                <td>my</td>
+                <td class="rank">26</td>
+                <td class="ipa">/maɪ/</td>
+                <td class="ipa">/maɪ/</td>
+              </tr>
+              <tr>
+                <td>his</td>
+                <td class="rank">27</td>
+                <td class="ipa">/hɪz/</td>
+                <td class="ipa">/hɪz/</td>
+              </tr>
+              <tr>
+                <td>get</td>
+                <td class="rank">28</td>
+                <td class="ipa">/ɡɛt/</td>
+                <td class="ipa">/ɡɛt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>go <span class="us-badge">US</span></td>
+                <td class="rank">29</td>
+                <td class="ipa">/ɡəʊ/</td>
+                <td class="ipa">/ɡoʊ/</td>
+              </tr>
+              <tr>
+                <td>from</td>
+                <td class="rank">30</td>
+                <td class="ipa">/frəm/</td>
+                <td class="ipa">/frəm/</td>
+              </tr>
+              <tr>
+                <td>will</td>
+                <td class="rank">31</td>
+                <td class="ipa">/wɪl/</td>
+                <td class="ipa">/wɪl/</td>
+              </tr>
+              <tr>
+                <td>say</td>
+                <td class="rank">32</td>
+                <td class="ipa">/seɪ/</td>
+                <td class="ipa">/seɪ/</td>
+              </tr>
+              <tr>
+                <td>can</td>
+                <td class="rank">33</td>
+                <td class="ipa">/kən/</td>
+                <td class="ipa">/kən/</td>
+              </tr>
+              <tr>
+                <td>by</td>
+                <td class="rank">34</td>
+                <td class="ipa">/baɪ/</td>
+                <td class="ipa">/baɪ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>or <span class="us-badge">US</span></td>
+                <td class="rank">35</td>
+                <td class="ipa">/ɔː/</td>
+                <td class="ipa">/ɔːr/</td>
+              </tr>
+              <tr>
+                <td>all</td>
+                <td class="rank">36</td>
+                <td class="ipa">/ɔːl/</td>
+                <td class="ipa">/ɔːl/</td>
+              </tr>
+              <tr>
+                <td>me</td>
+                <td class="rank">37</td>
+                <td class="ipa">/mɪ/</td>
+                <td class="ipa">/mɪ/</td>
+              </tr>
+              <tr>
+                <td>she</td>
+                <td class="rank">38</td>
+                <td class="ipa">/ʃi/</td>
+                <td class="ipa">/ʃi/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>so <span class="us-badge">US</span></td>
+                <td class="rank">39</td>
+                <td class="ipa">/səʊ/</td>
+                <td class="ipa">/soʊ/</td>
+              </tr>
+              <tr>
+                <td>there</td>
+                <td class="rank">40</td>
+                <td class="ipa">/ðə/</td>
+                <td class="ipa">/ðə/</td>
+              </tr>
+              <tr>
+                <td>about</td>
+                <td class="rank">41</td>
+                <td class="ipa">/əˈbaʊt/</td>
+                <td class="ipa">/əˈbaʊt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>your <span class="us-badge">US</span></td>
+                <td class="rank">42</td>
+                <td class="ipa">/jɔː/</td>
+                <td class="ipa">/jʊr/</td>
+              </tr>
+              <tr>
+                <td>one</td>
+                <td class="rank">43</td>
+                <td class="ipa">/wʌn/</td>
+                <td class="ipa">/wʌn/</td>
+              </tr>
+              <tr>
+                <td>if</td>
+                <td class="rank">44</td>
+                <td class="ipa">/ɪf/</td>
+                <td class="ipa">/ɪf/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>her <span class="us-badge">US</span></td>
+                <td class="rank">45</td>
+                <td class="ipa">/ə/</td>
+                <td class="ipa">/ər/</td>
+              </tr>
+              <tr>
+                <td>out</td>
+                <td class="rank">46</td>
+                <td class="ipa">/aʊt/</td>
+                <td class="ipa">/aʊt/</td>
+              </tr>
+              <tr>
+                <td>just</td>
+                <td class="rank">47</td>
+                <td class="ipa">/dʒʌst/</td>
+                <td class="ipa">/dʒʌst/</td>
+              </tr>
+              <tr>
+                <td>when</td>
+                <td class="rank">48</td>
+                <td class="ipa">/wɛn/</td>
+                <td class="ipa">/wɛn/</td>
+              </tr>
+              <tr>
+                <td>like</td>
+                <td class="rank">49</td>
+                <td class="ipa">/laɪk/</td>
+                <td class="ipa">/laɪk/</td>
+              </tr>
+              <tr>
+                <td>up</td>
+                <td class="rank">50</td>
+                <td class="ipa">/ʌp/</td>
+                <td class="ipa">/ʌp/</td>
+              </tr>
+              <tr>
+                <td>who</td>
+                <td class="rank">51</td>
+                <td class="ipa">/hu/</td>
+                <td class="ipa">/hu/</td>
+              </tr>
+              <tr>
+                <td>make</td>
+                <td class="rank">52</td>
+                <td class="ipa">/meɪk/</td>
+                <td class="ipa">/meɪk/</td>
+              </tr>
+              <tr>
+                <td>would</td>
+                <td class="rank">53</td>
+                <td class="ipa">/wəd/</td>
+                <td class="ipa">/wəd/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>no <span class="us-badge">US</span></td>
+                <td class="rank">54</td>
+                <td class="ipa">/nəʊ/</td>
+                <td class="ipa">/noʊ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>their <span class="us-badge">US</span></td>
+                <td class="rank">55</td>
+                <td class="ipa">/ðɛə/</td>
+                <td class="ipa">/ðɛr/</td>
+              </tr>
+              <tr>
+                <td>time</td>
+                <td class="rank">56</td>
+                <td class="ipa">/taɪm/</td>
+                <td class="ipa">/taɪm/</td>
+              </tr>
+              <tr>
+                <td>see</td>
+                <td class="rank">57</td>
+                <td class="ipa">/siː/</td>
+                <td class="ipa">/siː/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>more <span class="us-badge">US</span></td>
+                <td class="rank">58</td>
+                <td class="ipa">/mɔː/</td>
+                <td class="ipa">/mɔːr/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>know <span class="us-badge">US</span></td>
+                <td class="rank">59</td>
+                <td class="ipa">/nəʊ/</td>
+                <td class="ipa">/noʊ/</td>
+              </tr>
+              <tr>
+                <td>come</td>
+                <td class="rank">60</td>
+                <td class="ipa">/kʌm/</td>
+                <td class="ipa">/kʌm/</td>
+              </tr>
+              <tr>
+                <td>think</td>
+                <td class="rank">61</td>
+                <td class="ipa">/θɪŋk/</td>
+                <td class="ipa">/θɪŋk/</td>
+              </tr>
+              <tr>
+                <td>take</td>
+                <td class="rank">62</td>
+                <td class="ipa">/teɪk/</td>
+                <td class="ipa">/teɪk/</td>
+              </tr>
+              <tr>
+                <td>him</td>
+                <td class="rank">63</td>
+                <td class="ipa">/ɪm/</td>
+                <td class="ipa">/ɪm/</td>
+              </tr>
+              <tr>
+                <td>how</td>
+                <td class="rank">64</td>
+                <td class="ipa">/haʊ/</td>
+                <td class="ipa">/haʊ/</td>
+              </tr>
+              <tr>
+                <td>them</td>
+                <td class="rank">65</td>
+                <td class="ipa">/ðəm/</td>
+                <td class="ipa">/ðəm/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>want <span class="us-badge">US</span></td>
+                <td class="rank">66</td>
+                <td class="ipa">/wɒnt/</td>
+                <td class="ipa">/wɑːnt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>other <span class="us-badge">US</span></td>
+                <td class="rank">67</td>
+                <td class="ipa">/ˈʌðə/</td>
+                <td class="ipa">/ˈʌðər/</td>
+              </tr>
+              <tr>
+                <td>could</td>
+                <td class="rank">68</td>
+                <td class="ipa">/kəd/</td>
+                <td class="ipa">/kəd/</td>
+              </tr>
+              <tr>
+                <td>now</td>
+                <td class="rank">69</td>
+                <td class="ipa">/naʊ/</td>
+                <td class="ipa">/naʊ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>year <span class="us-badge">US</span></td>
+                <td class="rank">70</td>
+                <td class="ipa">/jɪə/</td>
+                <td class="ipa">/jɪr/</td>
+              </tr>
+              <tr>
+                <td>look</td>
+                <td class="rank">71</td>
+                <td class="ipa">/lʊk/</td>
+                <td class="ipa">/lʊk/</td>
+              </tr>
+              <tr>
+                <td>right</td>
+                <td class="rank">72</td>
+                <td class="ipa">/raɪt/</td>
+                <td class="ipa">/raɪt/</td>
+              </tr>
+              <tr>
+                <td>into</td>
+                <td class="rank">73</td>
+                <td class="ipa">/ˈɪntə/</td>
+                <td class="ipa">/ˈɪntə/</td>
+              </tr>
+              <tr>
+                <td>people</td>
+                <td class="rank">74</td>
+                <td class="ipa">/ˈpiːpəl/</td>
+                <td class="ipa">/ˈpiːpəl/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>our <span class="us-badge">US</span></td>
+                <td class="rank">75</td>
+                <td class="ipa">/aʊə/</td>
+                <td class="ipa">/aʊər/</td>
+              </tr>
+              <tr>
+                <td>which</td>
+                <td class="rank">76</td>
+                <td class="ipa">/wɪtʃ/</td>
+                <td class="ipa">/wɪtʃ/</td>
+              </tr>
+              <tr>
+                <td>then</td>
+                <td class="rank">77</td>
+                <td class="ipa">/ðɛn/</td>
+                <td class="ipa">/ðɛn/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>here <span class="us-badge">US</span></td>
+                <td class="rank">78</td>
+                <td class="ipa">/hɪə/</td>
+                <td class="ipa">/hɪr/</td>
+              </tr>
+              <tr>
+                <td>back</td>
+                <td class="rank">79</td>
+                <td class="ipa">/bæk/</td>
+                <td class="ipa">/bæk/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>work <span class="us-badge">US</span></td>
+                <td class="rank">80</td>
+                <td class="ipa">/wɜːk/</td>
+                <td class="ipa">/wɜːrk/</td>
+              </tr>
+              <tr>
+                <td>than</td>
+                <td class="rank">81</td>
+                <td class="ipa">/ðən/</td>
+                <td class="ipa">/ðən/</td>
+              </tr>
+              <tr>
+                <td>some</td>
+                <td class="rank">82</td>
+                <td class="ipa">/səm/</td>
+                <td class="ipa">/səm/</td>
+              </tr>
+              <tr>
+                <td>way</td>
+                <td class="rank">83</td>
+                <td class="ipa">/weɪ/</td>
+                <td class="ipa">/weɪ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>only <span class="us-badge">US</span></td>
+                <td class="rank">84</td>
+                <td class="ipa">/ˈəʊnli/</td>
+                <td class="ipa">/ˈoʊnli/</td>
+              </tr>
+              <tr>
+                <td>tell</td>
+                <td class="rank">85</td>
+                <td class="ipa">/tɛl/</td>
+                <td class="ipa">/tɛl/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>because <span class="us-badge">US</span></td>
+                <td class="rank">86</td>
+                <td class="ipa">/bɪˈkɒz/</td>
+                <td class="ipa">/bɪˈkɔːz/</td>
+              </tr>
+              <tr>
+                <td>thing</td>
+                <td class="rank">87</td>
+                <td class="ipa">/θɪŋ/</td>
+                <td class="ipa">/θɪŋ/</td>
+              </tr>
+              <tr>
+                <td>use</td>
+                <td class="rank">88</td>
+                <td class="ipa">/juːs/</td>
+                <td class="ipa">/juːs/</td>
+              </tr>
+              <tr>
+                <td>need</td>
+                <td class="rank">89</td>
+                <td class="ipa">/niːd/</td>
+                <td class="ipa">/niːd/</td>
+              </tr>
+              <tr>
+                <td>two</td>
+                <td class="rank">90</td>
+                <td class="ipa">/tuː/</td>
+                <td class="ipa">/tuː/</td>
+              </tr>
+              <tr>
+                <td>day</td>
+                <td class="rank">91</td>
+                <td class="ipa">/deɪ/</td>
+                <td class="ipa">/deɪ/</td>
+              </tr>
+              <tr>
+                <td>even</td>
+                <td class="rank">92</td>
+                <td class="ipa">/ˈiːvən/</td>
+                <td class="ipa">/ˈiːvən/</td>
+              </tr>
+              <tr>
+                <td>these</td>
+                <td class="rank">93</td>
+                <td class="ipa">/ðiːz/</td>
+                <td class="ipa">/ðiːz/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>where <span class="us-badge">US</span></td>
+                <td class="rank">94</td>
+                <td class="ipa">/wɛə/</td>
+                <td class="ipa">/wɛr/</td>
+              </tr>
+              <tr>
+                <td>give</td>
+                <td class="rank">95</td>
+                <td class="ipa">/ɡɪv/</td>
+                <td class="ipa">/ɡɪv/</td>
+              </tr>
+              <tr>
+                <td>man</td>
+                <td class="rank">96</td>
+                <td class="ipa">/mæn/</td>
+                <td class="ipa">/mæn/</td>
+              </tr>
+              <tr>
+                <td>find</td>
+                <td class="rank">97</td>
+                <td class="ipa">/faɪnd/</td>
+                <td class="ipa">/faɪnd/</td>
+              </tr>
+              <tr>
+                <td>us</td>
+                <td class="rank">98</td>
+                <td class="ipa">/əs/</td>
+                <td class="ipa">/əs/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>also <span class="us-badge">US</span></td>
+                <td class="rank">99</td>
+                <td class="ipa">/ˈɔːlsəʊ/</td>
+                <td class="ipa">/ˈɔːlsoʊ/</td>
+              </tr>
+              <tr>
+                <td>much</td>
+                <td class="rank">100</td>
+                <td class="ipa">/mʌtʃ/</td>
+                <td class="ipa">/mʌtʃ/</td>
+              </tr>
+
+              <!-- ORIGINAL / EXTRA WORDS — US DIFFERENCES FIRST -->
+              <tr class="us-diff">
+                <td>new <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/njuː/</td>
+                <td class="ipa">/nuː/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>first <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/fɜːst/</td>
+                <td class="ipa">/fɜːrst/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>most <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/məʊst/</td>
+                <td class="ipa">/moʊst/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>those <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ðəʊz/</td>
+                <td class="ipa">/ðoʊz/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>really <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈrɪəli/</td>
+                <td class="ipa">/ˈriːəli/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>never <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈnɛvə/</td>
+                <td class="ipa">/ˈnɛvər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>before <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪˈfɔː/</td>
+                <td class="ipa">/bɪˈfɔːr/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>off <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɒf/</td>
+                <td class="ipa">/ɔːf/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>long <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/lɒŋ/</td>
+                <td class="ipa">/lɔːŋ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>ask <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɑːsk/</td>
+                <td class="ipa">/æsk/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>show <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ʃəʊ/</td>
+                <td class="ipa">/ʃoʊ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>world <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/wɜːld/</td>
+                <td class="ipa">/wɜːrld/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>start <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/stɑːt/</td>
+                <td class="ipa">/stɑːrt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>last <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/lɑːst/</td>
+                <td class="ipa">/læst/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>own <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əʊn/</td>
+                <td class="ipa">/oʊn/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>home <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/həʊm/</td>
+                <td class="ipa">/hoʊm/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>oh <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əʊ/</td>
+                <td class="ipa">/oʊ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>another <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əˈnʌðə/</td>
+                <td class="ipa">/əˈnʌðər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>turn <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/tɜːn/</td>
+                <td class="ipa">/tɜːrn/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>family <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈfæmɪli/</td>
+                <td class="ipa">/ˈfæməli/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>both <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bəʊθ/</td>
+                <td class="ipa">/boʊθ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>old <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əʊld/</td>
+                <td class="ipa">/oʊld/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>hear <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/hɪə/</td>
+                <td class="ipa">/hɪr/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>better <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈbɛtə/</td>
+                <td class="ipa">/ˈbɛtər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>yeah <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/jɛə/</td>
+                <td class="ipa">/jæ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>sure <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ʃɔː/</td>
+                <td class="ipa">/ʃʊr/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>problem <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈprɒbləm/</td>
+                <td class="ipa">/ˈprɑːbləm/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>part <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/pɑːt/</td>
+                <td class="ipa">/pɑːrt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>far <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/fɑː/</td>
+                <td class="ipa">/fɑːr/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>hold <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/həʊld/</td>
+                <td class="ipa">/hoʊld/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>stop <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/stɒp/</td>
+                <td class="ipa">/stɑːp/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>open <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈəʊpən/</td>
+                <td class="ipa">/ˈoʊpən/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>job <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/dʒɒb/</td>
+                <td class="ipa">/dʒɑːb/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>over <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈəʊvə/</td>
+                <td class="ipa">/ˈoʊvər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>after <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɑːftə/</td>
+                <td class="ipa">/ˈæftər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>called <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kɔːld/</td>
+                <td class="ipa">/kɑːld/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>what's <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/wɒts/</td>
+                <td class="ipa">/wʌts/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>cold <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kəʊld/</td>
+                <td class="ipa">/koʊld/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>bears <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɛəz/</td>
+                <td class="ipa">/bɛrz/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>tired <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈtaɪəd/</td>
+                <td class="ipa">/ˈtaɪərd/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>gone <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɡɒn/</td>
+                <td class="ipa">/ɡɔːn/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>answer <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɑːnsə/</td>
+                <td class="ipa">/ˈænsər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>nobody <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈnəʊbədi/</td>
+                <td class="ipa">/ˈnoʊbədi/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>beer <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪə/</td>
+                <td class="ipa">/bɪr/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>ever <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɛvə/</td>
+                <td class="ipa">/ˈɛvər/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>necessary <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈnɛsəsəri/</td>
+                <td class="ipa">/ˈnɛsəsɛri/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>exercises <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɛksəsaɪzɪz/</td>
+                <td class="ipa">/ˈɛksərsaɪzɪz/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>understand <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˌʌndəˈstænd/</td>
+                <td class="ipa">/ˌʌndərˈstænd/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>students <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈstjuːdənts/</td>
+                <td class="ipa">/ˈstuːdənts/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>architect <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɑːkɪtɛkt/</td>
+                <td class="ipa">/ˈɑːrkɪtɛkt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>repaired <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/rɪˈpɛəd/</td>
+                <td class="ipa">/rɪˈperd/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>broken <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈbrəʊkən/</td>
+                <td class="ipa">/ˈbroʊkən/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>classes <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈklɑːsɪz/</td>
+                <td class="ipa">/ˈklæsɪz/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>morning <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈmɔːnɪŋ/</td>
+                <td class="ipa">/ˈmɔːrnɪŋ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>yourself <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/jɔːˈsɛlf/</td>
+                <td class="ipa">/jʊrˈsɛlf/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>crosswords <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈkrɒswɜːdz/</td>
+                <td class="ipa">/ˈkrɔːswɜːrdz/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>art <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɑːt/</td>
+                <td class="ipa">/ɑːrt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>going <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɡəʊɪŋ/</td>
+                <td class="ipa">/ˈɡoʊɪŋ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>copied <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈkɒpid/</td>
+                <td class="ipa">/ˈkɑːpid/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>burnt <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɜːnt/</td>
+                <td class="ipa">/bɜːrnt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>coat <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kəʊt/</td>
+                <td class="ipa">/koʊt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>can't <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kɑːnt/</td>
+                <td class="ipa">/kænt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>got <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɡɒt/</td>
+                <td class="ipa">/ɡɑːt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>shot <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ʃɒt/</td>
+                <td class="ipa">/ʃɑːt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>window <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈwɪndəʊ/</td>
+                <td class="ipa">/ˈwɪndoʊ/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>broke <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/brəʊk/</td>
+                <td class="ipa">/broʊk/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>lot <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/lɒt/</td>
+                <td class="ipa">/lɑːt/</td>
+              </tr>
+              <tr class="us-diff">
+                <td>mountains <span class="us-badge">US</span></td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈmaʊntɪnz/</td>
+                <td class="ipa">/ˈmaʊntənz/</td>
+              </tr>
+
+              <!-- EXTRA SAME-PRONUNCIATION WORDS -->
+              <tr>
+                <td>life</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/laɪf/</td>
+                <td class="ipa">/laɪf/</td>
+              </tr>
+              <tr>
+                <td>any</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɛni/</td>
+                <td class="ipa">/ˈɛni/</td>
+              </tr>
+              <tr>
+                <td>should</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ʃəd/</td>
+                <td class="ipa">/ʃəd/</td>
+              </tr>
+              <tr>
+                <td>call</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kɔːl/</td>
+                <td class="ipa">/kɔːl/</td>
+              </tr>
+              <tr>
+                <td>down</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/daʊn/</td>
+                <td class="ipa">/daʊn/</td>
+              </tr>
+              <tr>
+                <td>too</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/tuː/</td>
+                <td class="ipa">/tuː/</td>
+              </tr>
+              <tr>
+                <td>why</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/waɪ/</td>
+                <td class="ipa">/waɪ/</td>
+              </tr>
+              <tr>
+                <td>feel</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/fiːl/</td>
+                <td class="ipa">/fiːl/</td>
+              </tr>
+              <tr>
+                <td>through</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/θruː/</td>
+                <td class="ipa">/θruː/</td>
+              </tr>
+              <tr>
+                <td>try</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/traɪ/</td>
+                <td class="ipa">/traɪ/</td>
+              </tr>
+              <tr>
+                <td>something</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈsʌmθɪŋ/</td>
+                <td class="ipa">/ˈsʌmθɪŋ/</td>
+              </tr>
+              <tr>
+                <td>many</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈmɛni/</td>
+                <td class="ipa">/ˈmɛni/</td>
+              </tr>
+              <tr>
+                <td>let</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/lɛt/</td>
+                <td class="ipa">/lɛt/</td>
+              </tr>
+              <tr>
+                <td>help</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/hɛlp/</td>
+                <td class="ipa">/hɛlp/</td>
+              </tr>
+              <tr>
+                <td>little</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈlɪtəl/</td>
+                <td class="ipa">/ˈlɪtəl/</td>
+              </tr>
+              <tr>
+                <td>may</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/meɪ/</td>
+                <td class="ipa">/meɪ/</td>
+              </tr>
+              <tr>
+                <td>child</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/tʃaɪld/</td>
+                <td class="ipa">/tʃaɪld/</td>
+              </tr>
+              <tr>
+                <td>mean</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/miːn/</td>
+                <td class="ipa">/miːn/</td>
+              </tr>
+              <tr>
+                <td>woman</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈwʊmən/</td>
+                <td class="ipa">/ˈwʊmən/</td>
+              </tr>
+              <tr>
+                <td>still</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/stɪl/</td>
+                <td class="ipa">/stɪl/</td>
+              </tr>
+              <tr>
+                <td>love</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/lʌv/</td>
+                <td class="ipa">/lʌv/</td>
+              </tr>
+              <tr>
+                <td>great</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɡreɪt/</td>
+                <td class="ipa">/ɡreɪt/</td>
+              </tr>
+              <tr>
+                <td>leave</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/liːv/</td>
+                <td class="ipa">/liːv/</td>
+              </tr>
+              <tr>
+                <td>around</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əˈraʊnd/</td>
+                <td class="ipa">/əˈraʊnd/</td>
+              </tr>
+              <tr>
+                <td>talk</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/tɔːk/</td>
+                <td class="ipa">/tɔːk/</td>
+              </tr>
+              <tr>
+                <td>school</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/skuːl/</td>
+                <td class="ipa">/skuːl/</td>
+              </tr>
+              <tr>
+                <td>keep</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kiːp/</td>
+                <td class="ipa">/kiːp/</td>
+              </tr>
+              <tr>
+                <td>put</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/pʊt/</td>
+                <td class="ipa">/pʊt/</td>
+              </tr>
+              <tr>
+                <td>while</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/waɪl/</td>
+                <td class="ipa">/waɪl/</td>
+              </tr>
+              <tr>
+                <td>place</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/pleɪs/</td>
+                <td class="ipa">/pleɪs/</td>
+              </tr>
+              <tr>
+                <td>big</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪɡ/</td>
+                <td class="ipa">/bɪɡ/</td>
+              </tr>
+              <tr>
+                <td>same</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/seɪm/</td>
+                <td class="ipa">/seɪm/</td>
+              </tr>
+              <tr>
+                <td>such</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/sʌtʃ/</td>
+                <td class="ipa">/sʌtʃ/</td>
+              </tr>
+              <tr>
+                <td>three</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/θriː/</td>
+                <td class="ipa">/θriː/</td>
+              </tr>
+              <tr>
+                <td>again</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əˈɡɛn/</td>
+                <td class="ipa">/əˈɡɛn/</td>
+              </tr>
+              <tr>
+                <td>change</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/tʃeɪndʒ/</td>
+                <td class="ipa">/tʃeɪndʒ/</td>
+              </tr>
+              <tr>
+                <td>play</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/pleɪ/</td>
+                <td class="ipa">/pleɪ/</td>
+              </tr>
+              <tr>
+                <td>each</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/iːtʃ/</td>
+                <td class="ipa">/iːtʃ/</td>
+              </tr>
+              <tr>
+                <td>always</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɔːlweɪz/</td>
+                <td class="ipa">/ˈɔːlweɪz/</td>
+              </tr>
+              <tr>
+                <td>high</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/haɪ/</td>
+                <td class="ipa">/haɪ/</td>
+              </tr>
+              <tr>
+                <td>every</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɛvri/</td>
+                <td class="ipa">/ˈɛvri/</td>
+              </tr>
+              <tr>
+                <td>point</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/pɔɪnt/</td>
+                <td class="ipa">/pɔɪnt/</td>
+              </tr>
+              <tr>
+                <td>run</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/rʌn/</td>
+                <td class="ipa">/rʌn/</td>
+              </tr>
+              <tr>
+                <td>state</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/steɪt/</td>
+                <td class="ipa">/steɪt/</td>
+              </tr>
+              <tr>
+                <td>away</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əˈweɪ/</td>
+                <td class="ipa">/əˈweɪ/</td>
+              </tr>
+              <tr>
+                <td>happen</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈhæpən/</td>
+                <td class="ipa">/ˈhæpən/</td>
+              </tr>
+              <tr>
+                <td>might</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/maɪt/</td>
+                <td class="ipa">/maɪt/</td>
+              </tr>
+              <tr>
+                <td>house</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/haʊs/</td>
+                <td class="ipa">/haʊs/</td>
+              </tr>
+              <tr>
+                <td>move</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/muːv/</td>
+                <td class="ipa">/muːv/</td>
+              </tr>
+              <tr>
+                <td>become</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪˈkʌm/</td>
+                <td class="ipa">/bɪˈkʌm/</td>
+              </tr>
+              <tr>
+                <td>seem</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/siːm/</td>
+                <td class="ipa">/siːm/</td>
+              </tr>
+              <tr>
+                <td>hand</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/hænd/</td>
+                <td class="ipa">/hænd/</td>
+              </tr>
+              <tr>
+                <td>between</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪˈtwiːn/</td>
+                <td class="ipa">/bɪˈtwiːn/</td>
+              </tr>
+              <tr>
+                <td>end</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɛnd/</td>
+                <td class="ipa">/ɛnd/</td>
+              </tr>
+              <tr>
+                <td>friend</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/frɛnd/</td>
+                <td class="ipa">/frɛnd/</td>
+              </tr>
+              <tr>
+                <td>live</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/lɪv/</td>
+                <td class="ipa">/lɪv/</td>
+              </tr>
+              <tr>
+                <td>name</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/neɪm/</td>
+                <td class="ipa">/neɪm/</td>
+              </tr>
+              <tr>
+                <td>few</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/fjuː/</td>
+                <td class="ipa">/fjuː/</td>
+              </tr>
+              <tr>
+                <td>believe</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪˈliːv/</td>
+                <td class="ipa">/bɪˈliːv/</td>
+              </tr>
+              <tr>
+                <td>night</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/naɪt/</td>
+                <td class="ipa">/naɪt/</td>
+              </tr>
+              <tr>
+                <td>since</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/sɪns/</td>
+                <td class="ipa">/sɪns/</td>
+              </tr>
+              <tr>
+                <td>best</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɛst/</td>
+                <td class="ipa">/bɛst/</td>
+              </tr>
+              <tr>
+                <td>yes</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/jɛs/</td>
+                <td class="ipa">/jɛs/</td>
+              </tr>
+              <tr>
+                <td>guy</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɡaɪ/</td>
+                <td class="ipa">/ɡaɪ/</td>
+              </tr>
+              <tr>
+                <td>bad</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bæd/</td>
+                <td class="ipa">/bæd/</td>
+              </tr>
+              <tr>
+                <td>next</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/nɛkst/</td>
+                <td class="ipa">/nɛkst/</td>
+              </tr>
+              <tr>
+                <td>bring</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/brɪŋ/</td>
+                <td class="ipa">/brɪŋ/</td>
+              </tr>
+              <tr>
+                <td>week</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/wiːk/</td>
+                <td class="ipa">/wiːk/</td>
+              </tr>
+              <tr>
+                <td>head</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/hɛd/</td>
+                <td class="ipa">/hɛd/</td>
+              </tr>
+              <tr>
+                <td>without</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/wɪˈðaʊt/</td>
+                <td class="ipa">/wɪˈðaʊt/</td>
+              </tr>
+              <tr>
+                <td>write</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/raɪt/</td>
+                <td class="ipa">/raɪt/</td>
+              </tr>
+              <tr>
+                <td>enough</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ɪˈnʌf/</td>
+                <td class="ipa">/ɪˈnʌf/</td>
+              </tr>
+              <tr>
+                <td>anything</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈɛnɪθɪŋ/</td>
+                <td class="ipa">/ˈɛnɪθɪŋ/</td>
+              </tr>
+              <tr>
+                <td>american</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/əˈmɛrɪkən/</td>
+                <td class="ipa">/əˈmɛrɪkən/</td>
+              </tr>
+              <tr>
+                <td>face</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/feɪs/</td>
+                <td class="ipa">/feɪs/</td>
+              </tr>
+              <tr>
+                <td>nothing</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈnʌθɪŋ/</td>
+                <td class="ipa">/ˈnʌθɪŋ/</td>
+              </tr>
+              <tr>
+                <td>must</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/məst/</td>
+                <td class="ipa">/məst/</td>
+              </tr>
+              <tr>
+                <td>story</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/ˈstɔːri/</td>
+                <td class="ipa">/ˈstɔːri/</td>
+              </tr>
+              <tr>
+                <td>kid</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/kɪd/</td>
+                <td class="ipa">/kɪd/</td>
+              </tr>
+              <tr>
+                <td>begin</td>
+                <td class="rank">it appears</td>
+                <td class="ipa">/bɪˈɡɪn/</td>
+                <td class="ipa">/bɪˈɡɪn/</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
       </section>
 
     </main>
