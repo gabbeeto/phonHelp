@@ -1,0 +1,543 @@
+:root {
+  --bg: #f6f6f4;
+  --card: #fff;
+  --fg: #17181a;
+  --muted: #5f6470;
+  --line: #e4e5e1;
+  --accent: #0d6b52;
+  --ipa: "Charis SIL", "Doulos SIL", "Gentium Plus", "Lucida Sans Unicode", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.62 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 18px 14px 70px
+}
+
+header {
+  padding: 6px 0 10px
+}
+
+h1 {
+  font-size: 1.45rem;
+  margin: 0 0 4px;
+  letter-spacing: -.01em
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: .88rem
+}
+
+nav.toc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 15px;
+  margin: 10px 0 20px
+}
+
+nav.toc h2 {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--muted);
+  margin: 0 0 8px;
+  border: 0;
+  padding: 0
+}
+
+nav.toc ol {
+  margin: 0;
+  padding-left: 1.3em;
+  font-size: .92rem
+}
+
+nav.toc li {
+  margin: 4px 0
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 15px;
+  margin: 0 0 16px;
+  scroll-margin-top: 12px
+}
+
+h2 {
+  font-size: 1.08rem;
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line)
+}
+
+h3 {
+  font-size: .97rem;
+  margin: 18px 0 6px;
+  color: var(--accent)
+}
+
+h3:first-of-type {
+  margin-top: 10px
+}
+
+p {
+  margin: 9px 0
+}
+
+ul,
+ol {
+  margin: 9px 0;
+  padding-left: 1.25em
+}
+
+li {
+  margin: 4px 0
+}
+
+.ipa,
+.from,
+.to,
+code {
+  font-family: var(--ipa)
+}
+
+/* plain example list */
+ul.ex {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0
+}
+
+ul.ex li {
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: .94rem;
+  font-family: var(--ipa)
+}
+
+ul.ex li:last-child {
+  border-bottom: 0
+}
+
+.from {
+  color: var(--muted)
+}
+
+.to {
+  font-weight: 650;
+  color: var(--accent)
+}
+
+/* grouped assimilation rules */
+.rule-block {
+  font-family: var(--ipa);
+  font-size: .93rem;
+  line-height: 1.65;
+  margin: 10px 0 16px;
+}
+
+.rule-first {
+  margin: 0
+}
+
+.rule-first b {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: .55em
+}
+
+.rule-cont {
+  margin: 0;
+  padding-left: 2.3em
+}
+
+.rule-first .to,
+.rule-cont .to {
+  font-weight: 650;
+  color: var(--accent)
+}
+
+/* transcription hints */
+ol.hints {
+  padding-left: 1.35em
+}
+
+ol.hints li {
+  margin: 8px 0;
+  font-size: .94rem
+}
+
+.note {
+  background: #fff8e8;
+  border-left: 3px solid #e0a100;
+  padding: 9px 11px;
+  border-radius: 0 8px 8px 0;
+  font-size: .9rem;
+  margin: 11px 0
+}
+
+.tip {
+  background: #eef2fb;
+  border-left: 3px solid #3b5bdb;
+  padding: 9px 11px;
+  border-radius: 0 8px 8px 0;
+  font-size: .9rem;
+  margin: 11px 0
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: .8rem;
+  padding: 10px 0 0
+}
+
+@media print {
+  body {
+    background: #fff
+  }
+
+  section,
+  nav.toc {
+    border-color: #ccc;
+    break-inside: avoid
+  }
+
+  a {
+    color: var(--fg)
+  }
+}
+
+img {
+  width: 100%;
+
+}
+
+.smallImg {
+
+  width: 32%;
+
+}
+
+/* ── added for the merged reference material ── */
+.fig {
+  margin: 14px 0 6px
+}
+
+.fig img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff
+}
+
+.fig figcaption {
+  font-size: .8rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 6px
+}
+
+.muted {
+  color: var(--muted);
+  font-size: .88rem;
+  margin: 4px 0 6px
+}
+
+ul.snd {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfbfa;
+  overflow: hidden
+}
+
+ul.snd li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px 9px;
+  margin: 0;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: .93rem
+}
+
+ul.snd li:last-child {
+  border-bottom: 0
+}
+
+ul.snd .ipa {
+  font-weight: 600;
+  background: #eef1ef;
+  border-radius: 5px;
+  padding: 0 6px
+}
+
+.tag {
+  font-size: .66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: 1px 8px;
+  border-radius: 20px;
+  background: #eef1ef;
+  color: var(--muted)
+}
+
+.tag.vd {
+  background: #e3f2ec;
+  color: #0d6b52
+}
+
+.tag.vl {
+  background: #eef1ef;
+  color: #5f6470
+}
+
+.tag.lg {
+  background: #e3f2ec;
+  color: #0d6b52
+}
+
+.tag.sh {
+  background: #eef1ef;
+  color: #5f6470
+}
+
+.eg {
+  color: var(--muted);
+  font-family: var(--ipa)
+}
+
+.place {
+  color: var(--muted);
+  font-size: .88rem
+}
+
+.vgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 16px;
+  margin: 10px 0 14px;
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fbfbfa;
+  font-size: .92rem
+}
+
+.vgrid>div {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap
+}
+
+@media (max-width:520px) {
+  .vgrid {
+    grid-template-columns: 1fr
+  }
+}
+
+/* ── weak forms transcription table (extra0) ── */
+.wf-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card)
+}
+
+.wf-table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: .86rem
+}
+
+.wf-table th,
+.wf-table td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top
+}
+
+.wf-table th {
+  background: #f0f0f0;
+  font-weight: 600;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2
+}
+
+.wf-table tbody tr:last-child td {
+  border-bottom: 0
+}
+
+.wf-table tr.us-diff {
+  background: #fff3e0
+}
+
+.wf-table tr.us-diff td:first-child {
+  border-left: 3px solid #ff9800
+}
+
+.wf-table .rank {
+  text-align: center;
+  color: var(--muted);
+  font-size: .78rem;
+  white-space: nowrap
+}
+
+.wf-table .ipa {
+  font-family: var(--ipa);
+  font-size: .9rem;
+  white-space: nowrap;
+  background: none;
+  padding: 0;
+  font-weight: 400
+}
+
+.wf-table td:first-child {
+  font-weight: 600;
+  min-width: 90px
+}
+
+.us-badge {
+  display: inline-block;
+  background: #ff9800;
+  color: #fff;
+  font-size: .6rem;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  vertical-align: middle;
+  font-weight: 600;
+  letter-spacing: .03em
+}
+
+.wf-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 12px;
+  font-size: .82rem;
+  align-items: center;
+  color: var(--muted)
+}
+
+.wf-legend .dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border-left: 3px solid #ff9800;
+  background: #fff3e0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px
+}
+
+@media (max-width:480px) {
+  .wf-table {
+    font-size: .8rem
+  }
+
+  .wf-table th,
+  .wf-table td {
+    padding: 6px 7px
+  }
+
+  .wf-table td:first-child {
+    min-width: 75px
+  }
+}
+
+/* ── exercise spoilers ── */
+details.spoiler {
+  margin: 10px 0 24px;
+  background: #fbfbfa;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+details.spoiler summary {
+  padding: 10px 14px;
+  background: var(--bg);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--accent);
+  list-style: none;
+  /* hides default arrow */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+details.spoiler summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Add a plus icon that changes to a minus when open */
+details.spoiler summary::after {
+  content: "➕";
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+details.spoiler[open] summary::after {
+  content: "➖";
+}
+
+details.spoiler summary:hover {
+  background: #ececeb;
+}
+
+details.spoiler .spoiler-content {
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+
+details.spoiler .spoiler-content ul,
+details.spoiler .spoiler-content ol {
+  margin: 0;
+  padding-left: 1.2em;
+}

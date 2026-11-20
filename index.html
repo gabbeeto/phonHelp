@@ -4,509 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Phonetics — Mock Exam Study Notes</title>
-  <style>
-    :root {
-      --bg: #f6f6f4;
-      --card: #fff;
-      --fg: #17181a;
-      --muted: #5f6470;
-      --line: #e4e5e1;
-      --accent: #0d6b52;
-      --ipa: "Charis SIL", "Doulos SIL", "Gentium Plus", "Lucida Sans Unicode", "Segoe UI", system-ui, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box
-    }
-
-    html {
-      -webkit-text-size-adjust: 100%
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font: 16px/1.62 system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    .wrap {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 18px 14px 70px
-    }
-
-    header {
-      padding: 6px 0 10px
-    }
-
-    h1 {
-      font-size: 1.45rem;
-      margin: 0 0 4px;
-      letter-spacing: -.01em
-    }
-
-    .sub {
-      margin: 0;
-      color: var(--muted);
-      font-size: .88rem
-    }
-
-    nav.toc {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 15px;
-      margin: 10px 0 20px
-    }
-
-    nav.toc h2 {
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .09em;
-      color: var(--muted);
-      margin: 0 0 8px;
-      border: 0;
-      padding: 0
-    }
-
-    nav.toc ol {
-      margin: 0;
-      padding-left: 1.3em;
-      font-size: .92rem
-    }
-
-    nav.toc li {
-      margin: 4px 0
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none
-    }
-
-    a:hover {
-      text-decoration: underline
-    }
-
-    section {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px 15px;
-      margin: 0 0 16px;
-      scroll-margin-top: 12px
-    }
-
-    h2 {
-      font-size: 1.08rem;
-      margin: 0 0 10px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--line)
-    }
-
-    h3 {
-      font-size: .97rem;
-      margin: 18px 0 6px;
-      color: var(--accent)
-    }
-
-    h3:first-of-type {
-      margin-top: 10px
-    }
-
-    p {
-      margin: 9px 0
-    }
-
-    ul,
-    ol {
-      margin: 9px 0;
-      padding-left: 1.25em
-    }
-
-    li {
-      margin: 4px 0
-    }
-
-    .ipa,
-    .from,
-    .to,
-    code {
-      font-family: var(--ipa)
-    }
-
-    /* plain example list */
-    ul.ex {
-      list-style: none;
-      padding: 0;
-      margin: 8px 0
-    }
-
-    ul.ex li {
-      padding: 7px 0;
-      border-bottom: 1px dashed var(--line);
-      font-size: .94rem;
-      font-family: var(--ipa)
-    }
-
-    ul.ex li:last-child {
-      border-bottom: 0
-    }
-
-    .from {
-      color: var(--muted)
-    }
-
-    .to {
-      font-weight: 650;
-      color: var(--accent)
-    }
-
-    /* grouped assimilation rules */
-    .rule-block {
-      font-family: var(--ipa);
-      font-size: .93rem;
-      line-height: 1.65;
-      margin: 10px 0 16px;
-    }
-
-    .rule-first {
-      margin: 0
-    }
-
-    .rule-first b {
-      color: var(--accent);
-      font-weight: 700;
-      margin-right: .55em
-    }
-
-    .rule-cont {
-      margin: 0;
-      padding-left: 2.3em
-    }
-
-    .rule-first .to,
-    .rule-cont .to {
-      font-weight: 650;
-      color: var(--accent)
-    }
-
-    /* transcription hints */
-    ol.hints {
-      padding-left: 1.35em
-    }
-
-    ol.hints li {
-      margin: 8px 0;
-      font-size: .94rem
-    }
-
-    .note {
-      background: #fff8e8;
-      border-left: 3px solid #e0a100;
-      padding: 9px 11px;
-      border-radius: 0 8px 8px 0;
-      font-size: .9rem;
-      margin: 11px 0
-    }
-
-    .tip {
-      background: #eef2fb;
-      border-left: 3px solid #3b5bdb;
-      padding: 9px 11px;
-      border-radius: 0 8px 8px 0;
-      font-size: .9rem;
-      margin: 11px 0
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: .8rem;
-      padding: 10px 0 0
-    }
-
-    @media print {
-      body {
-        background: #fff
-      }
-
-      section,
-      nav.toc {
-        border-color: #ccc;
-        break-inside: avoid
-      }
-
-      a {
-        color: var(--fg)
-      }
-    }
-
-    img {
-      width: 100%;
-
-    }
-
-    .smallImg {
-
-      width: 32%;
-
-    }
-
-    /* ── added for the merged reference material ── */
-    .fig {
-      margin: 14px 0 6px
-    }
-
-    .fig img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: #fff
-    }
-
-    .fig figcaption {
-      font-size: .8rem;
-      color: var(--muted);
-      text-align: center;
-      margin-top: 6px
-    }
-
-    .muted {
-      color: var(--muted);
-      font-size: .88rem;
-      margin: 4px 0 6px
-    }
-
-    ul.snd {
-      list-style: none;
-      padding: 0;
-      margin: 6px 0 14px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: #fbfbfa;
-      overflow: hidden
-    }
-
-    ul.snd li {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      gap: 3px 9px;
-      margin: 0;
-      padding: 6px 12px;
-      border-bottom: 1px solid var(--line);
-      font-size: .93rem
-    }
-
-    ul.snd li:last-child {
-      border-bottom: 0
-    }
-
-    ul.snd .ipa {
-      font-weight: 600;
-      background: #eef1ef;
-      border-radius: 5px;
-      padding: 0 6px
-    }
-
-    .tag {
-      font-size: .66rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      padding: 1px 8px;
-      border-radius: 20px;
-      background: #eef1ef;
-      color: var(--muted)
-    }
-
-    .tag.vd {
-      background: #e3f2ec;
-      color: #0d6b52
-    }
-
-    .tag.vl {
-      background: #eef1ef;
-      color: #5f6470
-    }
-
-    .tag.lg {
-      background: #e3f2ec;
-      color: #0d6b52
-    }
-
-    .tag.sh {
-      background: #eef1ef;
-      color: #5f6470
-    }
-
-    .eg {
-      color: var(--muted);
-      font-family: var(--ipa)
-    }
-
-    .place {
-      color: var(--muted);
-      font-size: .88rem
-    }
-
-    .vgrid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5px 16px;
-      margin: 10px 0 14px;
-      padding: 10px 13px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: #fbfbfa;
-      font-size: .92rem
-    }
-
-    .vgrid>div {
-      display: flex;
-      align-items: baseline;
-      gap: 6px;
-      flex-wrap: wrap
-    }
-
-    @media (max-width:520px) {
-      .vgrid {
-        grid-template-columns: 1fr
-      }
-    }
-
-    /* ── weak forms transcription table (extra0) ── */
-    .wf-wrap {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--card)
-    }
-
-    .wf-table {
-      width: 100%;
-      min-width: 520px;
-      border-collapse: collapse;
-      font-size: .86rem
-    }
-
-    .wf-table th,
-    .wf-table td {
-      padding: 8px 10px;
-      text-align: left;
-      border-bottom: 1px solid var(--line);
-      vertical-align: top
-    }
-
-    .wf-table th {
-      background: #f0f0f0;
-      font-weight: 600;
-      white-space: nowrap;
-      position: sticky;
-      top: 0;
-      z-index: 2
-    }
-
-    .wf-table tbody tr:last-child td {
-      border-bottom: 0
-    }
-
-    .wf-table tr.us-diff {
-      background: #fff3e0
-    }
-
-    .wf-table tr.us-diff td:first-child {
-      border-left: 3px solid #ff9800
-    }
-
-    .wf-table .rank {
-      text-align: center;
-      color: var(--muted);
-      font-size: .78rem;
-      white-space: nowrap
-    }
-
-    .wf-table .ipa {
-      font-family: var(--ipa);
-      font-size: .9rem;
-      white-space: nowrap;
-      background: none;
-      padding: 0;
-      font-weight: 400
-    }
-
-    .wf-table td:first-child {
-      font-weight: 600;
-      min-width: 90px
-    }
-
-    .us-badge {
-      display: inline-block;
-      background: #ff9800;
-      color: #fff;
-      font-size: .6rem;
-      padding: 1px 5px;
-      border-radius: 3px;
-      margin-left: 5px;
-      vertical-align: middle;
-      font-weight: 600;
-      letter-spacing: .03em
-    }
-
-    .wf-legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0 12px;
-      font-size: .82rem;
-      align-items: center;
-      color: var(--muted)
-    }
-
-    .wf-legend .dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 3px;
-      border-left: 3px solid #ff9800;
-      background: #fff3e0;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 5px
-    }
-
-    @media (max-width:480px) {
-      .wf-table {
-        font-size: .8rem
-      }
-
-      .wf-table th,
-      .wf-table td {
-        padding: 6px 7px
-      }
-
-      .wf-table td:first-child {
-        min-width: 75px
-      }
-    }
-  </style>
+  <title>Oral y Escrita</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="wrap">
 
     <header>
-      <h1>Contenido de primer año de fonetica</h1>
+      <h1>Contenido de primer año de Oral y Escrita(Estoy trabajando con eso aún)</h1>
       <p class="sub">final exam guide</p>
     </header>
 
     <nav class="toc">
-      <h2>Contenido del año</h2>
+      <h2>Contenido del año de Oral</h2>
       <ol>
         <li><a href="#figs">The speech organs &amp; charts</a></li>
         <li><a href="#phon">Phonetics vs. Phonology</a></li>
@@ -530,7 +41,7 @@
     </nav>
 
     <nav class="toc">
-      <h2>Contenido extra</h2>
+      <h2>Contenido extra de Oral</h2>
       <ol>
         <li><a href="#extra0">Transcription for Brittish Weak Forms words + Standard US Equivalents </a></li>
 
@@ -539,6 +50,12 @@
       </ol>
     </nav>
 
+    <nav class="toc">
+      <h2>Contenido de Escrita</h2>
+      <ol>
+        <li><a href="#future1">Grammar · Future 1 (will, going to, present continuous)</a></li>
+      </ol>
+    </nav>
 
 
     <main>
@@ -3668,6 +3185,384 @@
 
         </ul>
       </section>
+      <!-- ══════════ FUTURE 1 ══════════ -->
+      <section id="future1">
+        <h2>Escrita: Grammar · Future 1</h2>
+
+        <p>We can refer to the future in English by using <strong>will</strong>, <strong>be going to</strong> or by
+          using <strong>present tenses</strong>. Sometimes there is little difference between <em>will</em> and <em>be
+            going to</em>, but at other times we use them in different ways.</p>
+
+        <h3>Will</h3>
+        <p><strong>Form:</strong> <br>
+          <em>will</em> + infinitive without <em>to</em>. <br>
+          Negative: <strong>won't</strong>. <br>
+          Short form: <strong>'ll</strong>.
+        </p>
+        <p class="muted">In formal English we also use <em>shall</em> with <em>I</em> and <em>we</em> to refer to the
+          future. This is becoming rare.</p>
+
+        <p><strong>Meaning:</strong> Use <em>will</em> to talk generally about future beliefs, opinions, hopes and
+          predictions. There is usually a time expression. Add <em>perhaps</em>, <em>probably</em> or
+          <em>definitely</em> to show how certain or uncertain we are.
+        </p>
+
+        <div class="rule-block">
+          <p class="rule-first"><b>Probably / definitely</b></p>
+          <p class="rule-cont">They come <strong>after will</strong> but <strong>before won't</strong>:</p>
+          <p class="rule-cont">She'll <span class="to">probably</span> come with us tonight.</p>
+          <p class="rule-cont">She <span class="to">probably</span> won't come with us tonight.</p>
+        </div>
+
+        <ul class="ex">
+          <li>In the next century, most people will <span class="to">probably</span> live in big cities.</li>
+          <li><span class="to">Perhaps</span> it'll rain tomorrow.</li>
+          <li>United will <span class="to">definitely</span> win tonight.</li>
+        </ul>
+
+        <h3>Be going to</h3>
+        <p><strong>Form:</strong> <em>be</em> + <em>going</em> + infinitive.</p>
+        <ul class="ex">
+          <li>Jean is going to learn to drive.</li>
+          <li>Tim and Ann are going to travel abroad next year.</li>
+        </ul>
+
+        <p><strong>Meaning:</strong></p>
+        <ol class="hints">
+          <li><strong>Plans and intentions.</strong> The plan may be in the near future, or more distant.<br>
+            <em>I'm going to do lots of work this evening.</em><br>
+            <em>After I finish university I'm going to travel all over Europe by InterRail.</em>
+          </li>
+          <li><strong>Prediction with present evidence.</strong> When we can see in the present situation that something
+            is going to happen.<br>
+            <em>Look out! You're going to drop the plates!</em>
+          </li>
+        </ol>
+
+        <h3>Present continuous</h3>
+        <p><strong>Meaning:</strong> Use the present continuous future to talk about things we have arranged to do, such
+          as social arrangements and appointments. There is usually a time expression.</p>
+        <ul class="ex">
+          <li><strong>A:</strong> Are you doing anything on Friday evening?<br>
+            <strong>B:</strong> Not really. Why?<br>
+            <strong>A:</strong> I'm having a party. Would you like to come?
+          </li>
+        </ul>
+        <div class="note"><strong>State verbs</strong> (e.g. <em>be, know</em>) are not usually used in a continuous
+          form, so we use <em>will</em> or <em>going to</em> with these verbs.<br>
+          <em>I'll be back on Friday.</em> / <em>I'm going to be back on Friday.</em>
+        </div>
+
+        <h3>Will or going to?</h3>
+        <p>We can make predictions with <em>will</em> and <em>going to</em>, and on most occasions either is
+          possible.<br>
+          <em>I think it's going to / it'll probably rain tomorrow.</em>
+        </p>
+        <div class="tip">If there is <strong>strong evidence in the present situation</strong>, then we generally use
+          <em>going to</em>:<br>
+          <em>I think it's going to rain this afternoon.</em> (looking up at black clouds in the sky)
+        </div>
+
+        <h3>Going to or present continuous?</h3>
+        <p>We use <em>going to</em> and the present continuous for plans and arrangements, and either is usually
+          possible.<br>
+          <em>I'm going to have / I'm having a party on Friday.</em>
+        </p>
+        <ul>
+          <li><strong>Going to</strong> suggests that the details are not yet finalized — it's still just a plan.<br>
+            <em>Jean is going to have another driving lesson soon.</em> (a plan, with no specific time)
+          </li>
+          <li><strong>Present continuous</strong> suggests that the arrangement is more fixed, with a time and a
+            place.<br>
+            <em>Jean is having her driving lesson this afternoon.</em> (it's fixed, in her diary)
+          </li>
+        </ul>
+
+        <h3>Other meanings of will and shall</h3>
+        <ul class="ex">
+          <li>Is that the phone ringing? <strong>I'll answer</strong> it. <span class="from">(a spontaneous
+              decision)</span></li>
+          <li><strong>I'll do</strong> the best that I can to help you. <span class="from">(a promise)</span></li>
+          <li><strong>Shall I help</strong> you? <span class="from">(offer/suggestion)</span></li>
+        </ul>
+        <!-- ══════════ FUTURE 1 EXERCISES ══════════ -->
+        <h3>Exercises</h3>
+
+        <!-- Exercise 1 -->
+        <p><strong>1. Underline the correct sentence, a) or b), in each mini-dialogue.</strong></p>
+        <details class="spoiler">
+          <summary>Show Unsolved Questions</summary>
+          <div class="spoiler-content">
+            <ol class="hints">
+              <li>A: Can you come dancing tomorrow night?<br> <br> B: a) Sorry, I'll play basketball. <br> b) Sorry, I'm
+                playing
+                basketball.<br><br></li>
+              <li>A: What are your plans for the summer?<br><br>B: a) I'll spend a month in the mountains. <br> b) I'm going
+                to
+                spend a month in the mountains.<br><br></li>
+              <li>A: What do you think about the weather?<br><br>B: a) It'll probably rain tomorrow. <br> b) It's raining
+                tomorrow.<br><br></li>
+              <li>A: What about tomorrow at about 5.30?<br><br>B: a) OK, I'll see you then. <br> b) OK, I'm seeing you then.
+              <br><br></li>
+              <li>A: Mary is getting a dog in July for her birthday present. <br><br>B: a) Really? What is she calling it?
+                <br>
+                b) Really? What is she going to call it?<br><br></li>
+              <li>A: It would be nice to see you next week.<br><br>B: a) Are you doing anything on Wednesday? <br> b) Will
+                you
+                do anything on Wednesday?<br><br></li>
+            </ol>
+          </div>
+        </details>
+        <details class="spoiler">
+          <summary>Show Answers</summary>
+          <div class="spoiler-content">
+            <ol class="hints">
+              <li>A: Can you come dancing tomorrow night?<br>B: <b>b) Sorry, I'm playing basketball.</b></li>
+              <li>A: What are your plans for the summer?<br>B: <b>b) I'm going to spend a month in the mountains.</b>
+              </li>
+              <li>A: What do you think about the weather?<br>B: <b>a) It'll probably rain tomorrow.</b></li>
+              <li>A: What about tomorrow at about 5.30?<br>B: <b>b) OK, I'm seeing you then.</b></li>
+              <li>A: Mary is getting a dog in July for her birthday present.<br>B: <b>b) Really? What is she going to
+                  call it?</b></li>
+              <li>A: It would be nice to see you next week.<br>B: <b>a) Are you doing anything on Wednesday?</b></li>
+            </ol>
+          </div>
+        </details>
+
+        <!-- Exercise 2 -->
+        <p><strong>2. Put each verb in brackets into a form of <em>will, going to</em> or present continuous. (More than
+            one answer may be possible).</strong></p>
+        <details class="spoiler">
+          <summary>Show Unsolved Questions</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. Have you heard the news? Harry (join) ........................................ the Army!</li>
+              <li>2. Sorry to keep you waiting. I (not be) ........................................ long.</li>
+              <li>3. According to the weather forecast, it (snow) ........................................ tomorrow.
+              </li>
+              <li>4. I'm sorry I can't meet you tonight. I (go out) ........................................ with my
+                parents.</li>
+              <li>5. Careful! You (knock) ........................................ that jug off the table!</li>
+              <li>6. In 50 years' time, most people (probably ride) ........................................ bicycles to
+                work.</li>
+              <li>7. Our teacher (give) ........................................ us a test tomorrow.</li>
+              <li>8. I (go) ........................................ to Manchester at the end of next week.</li>
+              <li>9. Look out! You (hit) ........................................ that tree!</li>
+              <li>10. I think our team (probably win) ........................................ .</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spoiler">
+          <summary>Show Answers</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. Have you heard the news? Harry <span class="to">is joining / is going to join</span> the Army!</li>
+              <li>2. Sorry to keep you waiting. I <span class="to">won't be</span> long.</li>
+              <li>3. According to the weather forecast, it <span class="to">is going to snow / will snow</span>
+                tomorrow.</li>
+              <li>4. I'm sorry I can't meet you tonight. I <span class="to">am going out</span> with my parents.</li>
+              <li>5. Careful! You <span class="to">are going to knock</span> that jug off the table!</li>
+              <li>6. In 50 years' time, most people <span class="to">will probably ride</span> bicycles to work.</li>
+              <li>7. Our teacher <span class="to">is giving</span> us a test tomorrow.</li>
+              <li>8. I <span class="to">am going</span> to Manchester at the end of next week.</li>
+              <li>9. Look out! You <span class="to">are going to hit</span> that tree!</li>
+              <li>10. I think our team <span class="to">will probably win</span>.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Exercise 3 -->
+        <p><strong>3. Complete the second sentence so that it has a similar meaning to the first sentence.</strong></p>
+        <details class="spoiler">
+          <summary>Show Unsolved Questions</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. My party is on Thursday.<br>I ........................................ on Thursday.</li>
+              <li>2. Tomorrow's weather forecast is for rain.<br>It's ........................................ tomorrow.
+              </li>
+              <li>3. I predict a victory for our team.<br>I think ........................................ win.</li>
+              <li>4. Tomorrow I'll be absent, Mrs Jones.<br>I ........................................ here tomorrow,
+                Mrs Jones.</li>
+              <li>5. Terry intends to finish painting the kitchen this evening.<br>Terry
+                ........................................ painting the kitchen this evening.</li>
+              <li>6. Meet me outside the station at 5.30.<br>I ........................................ outside the
+                station at 5.30.</li>
+              <li>7. What's our arrangement for lunch?<br>Where ........................................ for lunch?</li>
+              <li>8. Everyone expects lots of tourism in this country next summer.<br>Everyone thinks a large number of
+                tourists ........................................ this country next summer.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spoiler">
+          <summary>Show Answers</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. My party is on Thursday. → I <span class="to">'m having a party</span> on Thursday.</li>
+              <li>2. Tomorrow's weather forecast is for rain. → It's <span class="to">going to rain</span> tomorrow.
+              </li>
+              <li>3. I predict a victory for our team. → I think <span class="to">our team will</span> win.</li>
+              <li>4. Tomorrow I'll be absent, Mrs Jones. → I <span class="to">won't be</span> here tomorrow, Mrs Jones.
+              </li>
+              <li>5. Terry intends to finish painting the kitchen this evening. → Terry <span class="to">is going to
+                  finish</span> painting the kitchen this evening.</li>
+              <li>6. Meet me outside the station at 5.30. → I <span class="to">'ll meet you</span> outside the station
+                at 5.30.</li>
+              <li>7. What's our arrangement for lunch? → Where <span class="to">are we meeting</span> for lunch?</li>
+              <li>8. Everyone expects lots of tourism in this country next summer. → Everyone thinks a large number of
+                tourists <span class="to">will visit</span> this country next summer.</li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Exercise 4 -->
+        <p><strong>4. Rewrite the sentences which are incorrect. If the sentence is correct, put a tick (✓).</strong>
+        </p>
+        <details class="spoiler">
+          <summary>Show Unsolved Questions</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. I go swimming next Saturday. Would you like to
+                come?<br>........................................................................................................
+              </li>
+              <li>2. What are you going to discuss at the next
+                meeting?<br>........................................................................................................
+              </li>
+              <li>3. The boat is turning over! I think it will
+                sink!<br>........................................................................................................
+              </li>
+              <li>4. Sue is going to lend me her
+                skates.<br>........................................................................................................
+              </li>
+              <li>5. The weather forecast says it's definitely sunny
+                tomorrow.<br>........................................................................................................
+              </li>
+              <li>6. There is a lot to do. Is anyone going to help
+                you?<br>........................................................................................................
+              </li>
+              <li>7. Sorry, I'm not seeing you tomorrow. I have to go to
+                London.<br>........................................................................................................
+              </li>
+              <li>8. Bye for now. I see you later this
+                evening.<br>........................................................................................................
+              </li>
+            </ul>
+          </div>
+        </details>
+        <details class="spoiler">
+          <summary>Show Answers</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. I go swimming next Saturday. Would you like to come? → <span class="to">I'm going swimming next
+                  Saturday.</span></li>
+              <li>2. What are you going to discuss at the next meeting? → <span class="to">✓</span></li>
+              <li>3. The boat is turning over! I think it will sink! → <span class="to">I think it's going to
+                  sink!</span></li>
+              <li>4. Sue is going to lend me her skates. → <span class="to">✓</span></li>
+              <li>5. The weather forecast says it's definitely sunny tomorrow. → <span class="to">✓</span></li>
+              <li>6. There is a lot to do. Is anyone going to help you? → <span class="to">✓</span></li>
+              <li>7. Sorry, I'm not seeing you tomorrow. I have to go to London. → <span class="to">I won't see you /
+                  I'm not going to see you tomorrow.</span></li>
+              <li>8. Bye for now. I see you later this evening. → <span class="to">I'll see you later this
+                  evening.</span></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Exercise 5 -->
+        <p><strong>5. Rewrite each sentence so that it contains <em>will</em> or <em>going to</em>.</strong></p>
+        <details class="spoiler">
+          <summary>Show Unsolved Questions</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. I plan to study engineering in
+                France.<br>........................................................................................................
+              </li>
+              <li>2. I've arranged a party for next
+                Friday.<br>........................................................................................................
+              </li>
+              <li>3. We've got an appointment at the doctor's, so we can't
+                come.<br>........................................................................................................
+              </li>
+              <li>4. Kelly is likely to get the
+                job.<br>........................................................................................................
+              </li>
+              <li>5. Martin's wife is pregnant
+                again.<br>........................................................................................................
+              </li>
+              <li>6. Sarah is usually late and I expect her to be late
+                tonight.<br>........................................................................................................
+              </li>
+              <li>7. I predict a score of
+                3-0.<br>........................................................................................................
+              </li>
+              <li>8. There's a possibility of snow
+                tomorrow.<br>........................................................................................................
+              </li>
+            </ul>
+          </div>
+        </details>
+        <details class="spoiler">
+          <summary>Show Answers</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. I plan to study engineering in France. → <span class="to">I'm going to study engineering in
+                  France.</span></li>
+              <li>2. I've arranged a party for next Friday. → <span class="to">I'm having / I'm going to have a party
+                  next Friday.</span></li>
+              <li>3. We've got an appointment at the doctor's, so we can't come. → <span class="to">We're seeing / We're
+                  going to see the doctor, so we can't come.</span></li>
+              <li>4. Kelly is likely to get the job. → <span class="to">Kelly will probably get / is probably going to
+                  get the job.</span></li>
+              <li>5. Martin's wife is pregnant again. → <span class="to">Martin's wife is going to have a baby.</span>
+              </li>
+              <li>6. Sarah is usually late and I expect her to be late tonight. → <span class="to">Sarah will probably
+                  be late tonight.</span></li>
+              <li>7. I predict a score of 3-0. → <span class="to">I think it will be / is going to be 3-0.</span></li>
+              <li>8. There's a possibility of snow tomorrow. → <span class="to">It might snow / It's going to snow
+                  tomorrow.</span></li>
+            </ul>
+          </div>
+        </details>
+
+        <!-- Exercise 6 -->
+        <p><strong>6. Put one suitable word in each space.</strong></p>
+        <details class="spoiler">
+          <summary>Show Unsolved Questions</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. I've got a test tomorrow, so I'm ........................ up early to do some revision.</li>
+              <li>2. That suitcase looks heavy. ........................ I carry it for you?</li>
+              <li>3. Sorry, but I ........................ be here tomorrow. I have to go to the doctor's.</li>
+              <li>4. Which team do you think ........................ win the match?</li>
+              <li>5. Bye for now. I'll see you next week, but I'm not sure.</li>
+              <li>6. We're ........................ skating this afternoon. Do you want to come?</li>
+              <li>7. The weather isn't very good, so there ........................ be many people at the beach today.
+              </li>
+              <li>8. Where do you want me to put these books? ........................ I leave them here?</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spoiler">
+          <summary>Show Answers</summary>
+          <div class="spoiler-content">
+            <ul class="ex">
+              <li>1. I've got a test tomorrow, so I'm <span class="to">getting</span> up early to do some revision.</li>
+              <li>2. That suitcase looks heavy. <span class="to">Shall / Will</span> I carry it for you?</li>
+              <li>3. Sorry, but I <span class="to">won't</span> be here tomorrow. I have to go to the doctor's.</li>
+              <li>4. Which team do you think <span class="to">will</span> win the match?</li>
+              <li>5. Bye for now. I'll see you next week, but I'm not sure.</li>
+              <li>6. We're <span class="to">going</span> skating this afternoon. Do you want to come?</li>
+              <li>7. The weather isn't very good, so there <span class="to">won't</span> be many people at the beach
+                today.</li>
+              <li>8. Where do you want me to put these books? <span class="to">Shall / Will</span> I leave them here?
+              </li>
+            </ul>
+          </div>
+        </details>
+
+
+      </section>
+
 
     </main>
 
