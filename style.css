@@ -541,3 +541,106 @@ details.spoiler .spoiler-content ol {
   margin: 0;
   padding-left: 1.2em;
 }
+
+
+/* ── Interactive Vowel Chart ── */
+.vowel-chart-wrap {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  aspect-ratio: 4 / 3;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.vowel-chart-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.vowel-btn {
+  position: absolute;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--ipa);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%); /* Centers the button on the coordinates */
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.vowel-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Playing animation */
+.vowel-btn.playing {
+  animation: pulse 0.4s ease-out;
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(13, 107, 82, 0.6); }
+  100% { box-shadow: 0 0 0 15px rgba(13, 107, 82, 0); }
+}
+
+/* Responsive scaling for mobile */
+@media (max-width: 480px) {
+  .vowel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Diphthongs grid below */
+.diphthong-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fbfbfa;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.diphthong-grid .vowel-btn {
+  position: relative;
+  transform: none;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 8px;
+  height: 40px;
+}
+
+.diphthong-grid .vowel-btn:hover {
+  transform: scale(1.05);
+}
+.diphthong-grid .vowel-btn.playing {
+  transform: scale(1.05);
+}

@@ -47,6 +47,10 @@
 
         <li><a href="#transcriptionExamples">Transcription examples with everything from connected speech applied</a>
         </li>
+
+        <li><a href="#vowelChart">Interactive Vowel Chart</a></li>
+
+
       </ol>
     </nav>
 
@@ -3196,6 +3200,56 @@
           </li>
 
         </ul>
+      </section>
+
+
+      <section id="vowelChart">
+        <h2>Interactive Vowel Chart</h2>
+        <p>Click on any vowel to hear its pronunciation (British English). The trapezoid shows the position of the.</p>
+
+        <div class="vowel-chart-wrap">
+          <!-- Background Trapezoid Lines -->
+          <svg class="vowel-chart-svg" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <!-- Outer Trapezoid -->
+            <polygon points="40,20 360,20 300,280 100,280" fill="none" stroke="var(--line)" stroke-width="2" />
+
+            <!-- Horizontal Guides -->
+            <line x1="60" y1="85" x2="340" y2="85" stroke="var(--line)" stroke-dasharray="4" stroke-width="1" />
+            <line x1="80" y1="150" x2="320" y2="150" stroke="var(--line)" stroke-dasharray="4" stroke-width="1" />
+            <line x1="90" y1="215" x2="310" y2="215" stroke="var(--line)" stroke-dasharray="4" stroke-width="1" />
+
+            <!-- Vertical Guides -->
+            <line x1="200" y1="20" x2="200" y2="280" stroke="var(--line)" stroke-dasharray="4" stroke-width="1" />
+          </svg>
+
+          <!-- Monophthongs (Positioned using top/left percentages) -->
+
+          <!-- Close Vowels -->
+          <button class="vowel-btn" style="left: 18%; top: 13%;" data-audio="i:">iː</button>
+          <button class="vowel-btn" style="left: 80%; top: 13%;" data-audio="u:">uː</button>
+
+          <!-- Near-Close Vowels -->
+          <button class="vowel-btn" style="left: 28%; top: 22%;" data-audio="I">ɪ</button>
+          <button class="vowel-btn" style="left: 72%; top: 22%;" data-audio="U">ʊ</button>
+
+          <!-- Close-Mid / Mid Vowels -->
+          <button class="vowel-btn" style="left: 24%; top: 43%;" data-audio="e">e</button>
+          <button class="vowel-btn" style="left: 32%; top: 55%;" data-audio="3:">ɜː</button>
+          <button class="vowel-btn" style="left: 50%; top: 50%;" data-audio="schwa">ə</button>
+          <button class="vowel-btn" style="left: 72%; top: 64%;" data-audio="O:">ɔː</button>
+          <button class="vowel-btn" style="left: 78%; top: 52%;" data-audio="ou">o</button>
+
+          <!-- Open-Mid Vowels -->
+          <button class="vowel-btn" style="left: 27%; top: 78%;" data-audio="ae">æ</button>
+          <button class="vowel-btn" style="left: 62%; top: 64%;" data-audio="V">ʌ</button>
+          <button class="vowel-btn" style="left: 70%; top: 87%;" data-audio="Q">ɒ</button>
+
+          <!-- Open Vowel -->
+          <button class="vowel-btn" style="left: 65%; top: 87%;" data-audio="A:">ɑː</button>
+          <button class="vowel-btn" style="left: 29%; top: 87%;" data-audio="Au">a</button>
+        </div>
+
+
       </section>
 
       <!-- ══════════ CONJUNCTIONS ══════════ -->
@@ -7332,13 +7386,16 @@
 
       </section>
 
+
     </main>
 
     <footer>
       Hecho por Alan Gabriel con inteligencia artificial y material escolar
     </footer>
 
+
   </div>
+  <script src="js.js"></script>
 </body>
 
 </html>
